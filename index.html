@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife - เว็บไซต์เพื่อสุขภาพและการออกกำลังกาย</title>
+    <!-- ใช้งาน Tailwind CSS ผ่าน CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- นำเข้าฟอนต์ Prompt จาก Google Fonts เพื่อให้ภาษาไทยสวยงาม -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- นำเข้า Phosphor Icons สำหรับไอคอนต่างๆ -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <script>
+        // กำหนดธีมสีเริ่มต้นให้ Tailwind
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#10b981', // สีเขียว Emerald
+                        primaryDark: '#059669',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* สไตล์เพิ่มเติมที่ Tailwind อาจจะไม่ครอบคลุมทั้งหมด */
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased">
+
+    <!-- แถบนำทาง (Navbar) -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- โลโก้ -->
+                <a href="#" class="flex items-center gap-2 text-white font-bold text-2xl tracking-wide">
+                    <i class="ph-fill ph-barbell text-primary text-3xl"></i>
+                    FitLife
+                </a>
+
+                <!-- เมนูเดสก์ท็อป -->
+                <div class="hidden md:flex space-x-8 text-white font-medium">
+                    <a href="#home" class="hover:text-primary transition-colors">หน้าแรก</a>
+                    <a href="#features" class="hover:text-primary transition-colors">บริการ</a>
+                    <a href="#classes" class="hover:text-primary transition-colors">คลาสเรียน</a>
+                    <a href="#bmi" class="hover:text-primary transition-colors">คำนวณ BMI</a>
+                </div>
+
+                <!-- ปุ่มเริ่มเลย (เดสก์ท็อป) -->
+                <div class="hidden md:block">
+                    <a href="#classes" class="bg-primary hover:bg-primaryDark text-white px-6 py-2 rounded-full font-medium transition-colors shadow-lg shadow-primary/30">
+                        เริ่มกันเลย
+                    </a>
+                </div>
+
+                <!-- ปุ่มเมนูมือถือ (Hamburger) -->
+                <button id="mobile-menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- เมนูมือถือ (ซ่อนเป็นค่าเริ่มต้น) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 absolute top-full left-0 w-full shadow-xl">
+            <div class="flex flex-col px-4 pt-2 pb-6 space-y-3 text-white">
+                <a href="#home" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">หน้าแรก</a>
+                <a href="#features" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">บริการ</a>
+                <a href="#classes" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คลาสเรียน</a>
+                <a href="#bmi" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คำนวณ BMI</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ส่วน Hero Banner -->
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center md:text-left">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    สร้างร่างใหม่ที่ <br>
+                    <span class="text-primary">แข็งแกร่ง</span> กว่าเดิม
+                </h1>
+                <p class="text-lg md:text-xl text-slate-300 mb-8 font-light">
+                    เข้าร่วมกับ FitLife วันนี้ เพื่อค้นพบศักยภาพที่แท้จริงของคุณ พร้อมผู้เชี่ยวชาญที่จะดูแลคุณในทุกย่างก้าว
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#classes" class="bg-primary hover:bg-primaryDark text-white px-8 py-3 rounded-full font-medium text-lg transition-colors text-center shadow-lg shadow-primary/30">
+                        ดูคลาสเรียน
+                    </a>
+                    <a href="#bmi" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-3 rounded-full font-medium text-lg transition-colors text-center">
+                        เช็คสุขภาพของคุณ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนบริการ (Features) -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">ทำไมต้องเลือก FitLife?</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                <p class="text-slate-600 mt-6 max-w-2xl mx-auto">เรามีสภาพแวดล้อมและอุปกรณ์ที่ดีที่สุด เพื่อให้คุณบรรลุเป้าหมายทางสุขภาพได้อย่างมีประสิทธิภาพ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- บริการ 1 -->
+                <div class="text-center p-8 rounded-2xl bg-slate-50 hover:shadow-xl transition-shadow border border-slate-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary text-3xl">
+                        <i class="ph-fill ph-users-three"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">เทรนเนอร์มืออาชีพ</h3>
+                    <p class="text-slate-600">ทีมผู้ฝึกสอนที่ผ่านการรับรอง พร้อมให้คำปรึกษาและออกแบบโปรแกรมเฉพาะบุคคล</p>
+                </div>
+                
+                <!-- บริการ 2 -->
+                <div class="text-center p-8 rounded-2xl bg-slate-50 hover:shadow-xl transition-shadow border border-slate-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary text-3xl">
+                        <i class="ph-fill ph-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">อุปกรณ์ทันสมัย</h3>
+                    <p class="text-slate-600">เครื่องออกกำลังกายระดับพรีเมียม นำเข้าจากต่างประเทศ ปลอดภัยและได้มาตรฐาน</p>
+                </div>
+
+                <!-- บริการ 3 -->
+                <div class="text-center p-8 rounded-2xl bg-slate-50 hover:shadow-xl transition-shadow border border-slate-100">
+                    <div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6 text-primary text-3xl">
+                        <i class="ph-fill ph-calendar-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">คลาสเรียนหลากหลาย</h3>
+                    <p class="text-slate-600">มีคลาสให้เลือกมากกว่า 50 คลาสต่อสัปดาห์ ตั้งแต่โยคะไปจนถึงคาร์ดิโอเข้มข้น</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนคลาสเรียน (Classes) -->
+    <section id="classes" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">คลาสยอดนิยม</h2>
+                    <div class="w-20 h-1 bg-primary rounded-full"></div>
+                </div>
+                <p class="text-slate-600 mt-4 md:mt-0 max-w-md">เลือกรูปแบบการออกกำลังกายที่ตรงกับไลฟ์สไตล์และความชอบของคุณ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- คลาส 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000&auto=format&fit=crop" alt="เวทเทรนนิ่ง" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-slate-900 px-3 py-1 rounded-full text-sm font-semibold">
+                            เสริมกล้ามเนื้อ
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Weight Training</h3>
+                        <p class="text-slate-600 mb-4">สร้างกล้ามเนื้อ เพิ่มความแข็งแรง และปรับระบบเผาผลาญด้วยการยกน้ำหนัก</p>
+                        <div class="flex items-center text-sm text-slate-500 gap-4">
+                            <span class="flex items-center gap-1"><i class="ph ph-clock"></i> 60 นาที</span>
+                            <span class="flex items-center gap-1"><i class="ph ph-fire"></i> 400 kcal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- คลาส 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1000&auto=format&fit=crop" alt="โยคะ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-slate-900 px-3 py-1 rounded-full text-sm font-semibold">
+                            ยืดหยุ่น & ผ่อนคลาย
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Vinyasa Yoga</h3>
+                        <p class="text-slate-600 mb-4">ฝึกการทรงตัว ความยืดหยุ่น และการกำหนดลมหายใจเพื่อผ่อนคลายจิตใจ</p>
+                        <div class="flex items-center text-sm text-slate-500 gap-4">
+                            <span class="flex items-center gap-1"><i class="ph ph-clock"></i> 45 นาที</span>
+                            <span class="flex items-center gap-1"><i class="ph ph-fire"></i> 250 kcal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- คลาส 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop" alt="คาร์ดิโอ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-slate-900 px-3 py-1 rounded-full text-sm font-semibold">
+                            เผาผลาญไขมัน
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">HIIT Cardio</h3>
+                        <p class="text-slate-600 mb-4">การออกกำลังกายแบบความเข้มข้นสูงสลับพัก เผาผลาญไขมันอย่างรวดเร็ว</p>
+                        <div class="flex items-center text-sm text-slate-500 gap-4">
+                            <span class="flex items-center gap-1"><i class="ph ph-clock"></i> 30 นาที</span>
+                            <span class="flex items-center gap-1"><i class="ph ph-fire"></i> 500 kcal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนคำนวณ BMI (Interactive) -->
+    <section id="bmi" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <!-- วงกลมตกแต่งพื้นหลัง -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-primary/20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-blue-500/20 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                
+                <!-- ข้อความด้านซ้าย -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">รู้หรือไม่? ร่างกายคุณอยู่ในเกณฑ์ไหน?</h2>
+                    <p class="text-slate-300 mb-8 text-lg">
+                        ดัชนีมวลกาย (BMI) เป็นมาตรวัดมาตรฐานที่ช่วยประเมินสภาวะของร่างกายว่ามีความสมดุลระหว่างน้ำหนักและส่วนสูงหรือไม่ ลองคำนวณดูเลย!
+                    </p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <i class="ph-fill ph-check-circle text-primary text-xl"></i> น้ำหนักน้อยกว่าเกณฑ์ (BMI < 18.5)
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <i class="ph-fill ph-check-circle text-primary text-xl"></i> น้ำหนักปกติ (BMI 18.5 - 22.9)
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <i class="ph-fill ph-check-circle text-primary text-xl"></i> น้ำหนักเกิน (BMI 23.0 - 24.9)
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-300">
+                            <i class="ph-fill ph-check-circle text-primary text-xl"></i> โรคอ้วน (BMI ≥ 25.0)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- ฟอร์มคำนวณด้านขวา -->
+                <div class="w-full lg:w-1/2">
+                    <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-2xl">
+                        <h3 class="text-2xl font-bold mb-6 text-center">เครื่องคิดเลข BMI</h3>
+                        
+                        <div class="space-y-6">
+                            <div>
+                                <label for="weight" class="block text-sm font-medium text-slate-400 mb-2">น้ำหนัก (กิโลกรัม)</label>
+                                <input type="number" id="weight" placeholder="เช่น 65" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                            </div>
+                            
+                            <div>
+                                <label for="height" class="block text-sm font-medium text-slate-400 mb-2">ส่วนสูง (เซนติเมตร)</label>
+                                <input type="number" id="height" placeholder="เช่น 170" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                            </div>
+
+                            <button onclick="calculateBMI()" class="w-full bg-primary hover:bg-primaryDark text-white py-4 rounded-xl font-bold text-lg transition-colors shadow-lg shadow-primary/20">
+                                คำนวณผลลัพธ์
+                            </button>
+                        </div>
+
+                        <!-- พื้นที่แสดงผลลัพธ์ (ซ่อนไว้ก่อน) -->
+                        <div id="bmi-result" class="mt-8 p-6 rounded-xl hidden text-center transition-all duration-300">
+                            <p class="text-sm text-slate-300 mb-1">ค่า BMI ของคุณคือ</p>
+                            <div id="bmi-score" class="text-4xl font-bold mb-2">0.0</div>
+                            <div id="bmi-category" class="inline-block px-4 py-1 rounded-full text-sm font-semibold mt-2">
+                                หมวดหมู่
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ส่วนท้าย (Footer) -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- โลโก้ & คำอธิบาย -->
+                <div>
+                    <a href="#" class="flex items-center gap-2 text-white font-bold text-2xl tracking-wide mb-4">
+                        <i class="ph-fill ph-barbell text-primary text-3xl"></i>
+                        FitLife
+                    </a>
+                    <p class="text-sm">มุ่งมั่นที่จะเป็นส่วนหนึ่งในการสร้างสุขภาพที่ดีและรูปร่างที่คุณปรารถนา ด้วยเครื่องมือและบุคลากรคุณภาพ</p>
+                </div>
+                
+                <!-- ลิงก์ด่วน -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">ลิงก์ด่วน</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-primary transition-colors">หน้าแรก</a></li>
+                        <li><a href="#features" class="hover:text-primary transition-colors">บริการของเรา</a></li>
+                        <li><a href="#classes" class="hover:text-primary transition-colors">คลาสเรียน</a></li>
+                        <li><a href="#bmi" class="hover:text-primary transition-colors">คำนวณ BMI</a></li>
+                    </ul>
+                </div>
+
+                <!-- ติดต่อ -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">ติดต่อเรา</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i class="ph ph-map-pin"></i> 123 ถ.สุขุมวิท กรุงเทพฯ 10110</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-phone"></i> 02-XXX-XXXX</li>
+                        <li class="flex items-center gap-2"><i class="ph ph-envelope"></i> contact@fitlife.com</li>
+                    </ul>
+                    <!-- Social Icons -->
+                    <div class="flex gap-4 mt-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-900 flex items-center justify-center hover:bg-primary hover:text-white transition-colors"><i class="ph-fill ph-youtube-logo text-xl"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-slate-900 text-center text-sm">
+                <p>&copy; 2026 FitLife Fitness. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript สำหรับการโต้ตอบในหน้าเว็บ -->
+    <script>
+        // --- ระบบเมนูมือถือ ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        // สลับการแสดงผลเมนู
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // ปิดเมนูเมื่อคลิกลิงก์บนมือถือ
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- ระบบเปลี่ยนสี Navbar เมื่อเลื่อนหน้าจอ ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                // เมื่อเลื่อนลงมา ให้พื้นหลังทึบและมีเงา
+                navbar.classList.remove('bg-transparent', 'py-4');
+                navbar.classList.add('bg-slate-950/95', 'backdrop-blur-md', 'shadow-md', 'py-3');
+            } else {
+                // เมื่ออยู่บนสุด ให้พื้นหลังโปร่งใส
+                navbar.classList.add('bg-transparent', 'py-4');
+                navbar.classList.remove('bg-slate-950/95', 'backdrop-blur-md', 'shadow-md', 'py-3');
+            }
+        });
+
+        // --- ระบบคำนวณ BMI ---
+        function calculateBMI() {
+            const weightInput = document.getElementById('weight').value;
+            const heightInput = document.getElementById('height').value;
+            const resultDiv = document.getElementById('bmi-result');
+            const scoreDiv = document.getElementById('bmi-score');
+            const categoryDiv = document.getElementById('bmi-category');
+
+            // ตรวจสอบว่ากรอกข้อมูลครบหรือไม่
+            if (!weightInput || !heightInput) {
+                alert('กรุณากรอกน้ำหนักและส่วนสูงให้ครบถ้วน');
+                return;
+            }
+
+            const weight = parseFloat(weightInput);
+            const height = parseFloat(heightInput) / 100; // แปลงซม. เป็นเมตร
+
+            if (weight <= 0 || height <= 0) {
+                alert('กรุณากรอกตัวเลขที่ถูกต้อง');
+                return;
+            }
+
+            // สูตรคำนวณ BMI = น้ำหนัก(kg) / (ส่วนสูง(m) x ส่วนสูง(m))
+            const bmi = weight / (height * height);
+            
+            // แสดงผลเป็นทศนิยม 1 ตำแหน่ง
+            scoreDiv.textContent = bmi.toFixed(1);
+            
+            // ประมวลผลหมวดหมู่ตามเกณฑ์คนเอเชีย
+            resultDiv.classList.remove('hidden', 'bg-blue-900/50', 'bg-green-900/50', 'bg-yellow-900/50', 'bg-red-900/50');
+            categoryDiv.classList.remove('text-blue-300', 'text-green-300', 'text-yellow-300', 'text-red-300', 'bg-blue-500/20', 'bg-green-500/20', 'bg-yellow-500/20', 'bg-red-500/20');
+
+            if (bmi < 18.5) {
+                categoryDiv.textContent = "น้ำหนักน้อยกว่าเกณฑ์";
+                resultDiv.classList.add('bg-blue-900/50');
+                categoryDiv.classList.add('text-blue-300', 'bg-blue-500/20');
+                scoreDiv.className = "text-4xl font-bold mb-2 text-blue-400";
+            } else if (bmi >= 18.5 && bmi <= 22.9) {
+                categoryDiv.textContent = "สมส่วน / สุขภาพดี";
+                resultDiv.classList.add('bg-green-900/50');
+                categoryDiv.classList.add('text-green-300', 'bg-green-500/20');
+                scoreDiv.className = "text-4xl font-bold mb-2 text-green-400";
+            } else if (bmi >= 23.0 && bmi <= 24.9) {
+                categoryDiv.textContent = "น้ำหนักเกิน (ท้วม)";
+                resultDiv.classList.add('bg-yellow-900/50');
+                categoryDiv.classList.add('text-yellow-300', 'bg-yellow-500/20');
+                scoreDiv.className = "text-4xl font-bold mb-2 text-yellow-400";
+            } else {
+                categoryDiv.textContent = "โรคอ้วน";
+                resultDiv.classList.add('bg-red-900/50');
+                categoryDiv.classList.add('text-red-300', 'bg-red-500/20');
+                scoreDiv.className = "text-4xl font-bold mb-2 text-red-400";
+            }
+        }
+    </script>
+</body>
+</html>
