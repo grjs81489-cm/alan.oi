@@ -36,7 +36,7 @@
             background-attachment: fixed;
         }
     </style>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+</head>
 <body class="font-sans text-slate-800 bg-slate-50 antialiased">
 
     <!-- แถบนำทาง (Navbar) -->
@@ -227,7 +227,7 @@
                 <div class="w-full lg:w-1/2">
                     <h2 class="text-3xl md:text-4xl font-bold mb-6">รู้หรือไม่? ร่างกายคุณอยู่ในเกณฑ์ไหน?</h2>
                     <p class="text-slate-300 mb-8 text-lg">
-                        ดัชนีมวลกาย (BMI) เป็นมาตรวัดมาตรฐานที่ช่วยประเมินสภาวะของร่างกายว่ามีความสมดุลระหว่างน้ำหนักและส่วนสูงหรือไม่ ลองคำนวณดูเลย!
+                        ดัชนีมวลกาย (BMI) เป็นมาตรวัดมาตรฐานที่ช่วยประเมินสภาวะของร่างกายว่ามีความสมดุลระหว่างน้ำหนักและส่วนสูงหรือไม่ ลองคำนวณดูเลย! พร้อมรับตารางออกกำลังกายฟรี!
                     </p>
                     
                     <ul class="space-y-4 mb-8">
@@ -274,10 +274,49 @@
                             <div id="bmi-category" class="inline-block px-4 py-1 rounded-full text-sm font-semibold mt-2">
                                 หมวดหมู่
                             </div>
+                            <button onclick="document.getElementById('plan-section').scrollIntoView({behavior: 'smooth'})" id="view-plan-btn" class="mt-6 w-full bg-slate-700 hover:bg-slate-600 text-white py-2 rounded-lg font-medium transition-colors hidden shadow-md">
+                                ดูตารางแนะนำ 1 สัปดาห์ <i class="ph ph-arrow-down inline-block ml-1"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            <!-- ส่วนตารางแนะนำ (ดีไซน์ใหม่ สีสว่างน่ารัก) -->
+            <div id="plan-section" class="hidden mt-16 bg-white p-8 md:p-10 rounded-3xl border-2 border-orange-200 shadow-[0_20px_50px_rgba(249,115,22,0.15)] transition-all duration-500 opacity-0 transform translate-y-8 relative overflow-hidden">
+                <!-- ตกแต่งพื้นหลังตาราง -->
+                <div class="absolute top-0 right-0 -mr-16 -mt-16 w-64 h-64 rounded-full bg-orange-400/10 blur-3xl pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-16 -mb-16 w-64 h-64 rounded-full bg-yellow-400/10 blur-3xl pointer-events-none"></div>
+
+                <div class="text-center mb-8 relative z-10">
+                    <h3 id="plan-title" class="text-2xl md:text-3xl font-bold text-slate-900 mb-3 drop-shadow-sm">ตารางออกกำลังกายและโภชนาการ</h3>
+                    <div class="inline-block bg-orange-100 px-4 py-2 rounded-full mb-4">
+                        <p id="plan-diet" class="text-orange-600 md:text-lg font-bold">คำแนะนำ: ...</p>
+                    </div>
+                </div>
+                
+                <div class="overflow-x-auto relative z-10">
+                    <table class="w-full text-left border-collapse min-w-[700px] bg-white rounded-xl overflow-hidden shadow-sm border border-slate-100">
+                        <thead>
+                            <tr class="bg-gradient-to-r from-orange-400 to-yellow-400 text-white">
+                                <th class="p-5 w-24 font-bold text-lg border-r border-white/20">วัน</th>
+                                <th class="p-5 w-1/3 font-bold text-lg border-r border-white/20"><i class="ph-fill ph-barbell mr-2"></i>การออกกำลังกาย</th>
+                                <th class="p-5 font-bold text-lg"><i class="ph-fill ph-apple-logo mr-2"></i>โภชนาการ (แนะนำ)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="plan-table-body" class="divide-y divide-slate-100 text-slate-700">
+                            <!-- จะถูกเติมด้วย JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- ปุ่มพิมพ์หรือบันทึก -->
+                <div class="mt-8 text-center">
+                    <button onclick="window.print()" class="bg-white border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-6 py-2 rounded-full font-bold transition-colors shadow-sm inline-flex items-center gap-2">
+                        <i class="ph ph-printer"></i> พิมพ์ตารางนี้
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -324,8 +363,7 @@
             </div>
             
             <div class="mt-12 pt-8 border-t border-slate-900 text-center text-sm">
-                <p align="center">ผู้จัดทำ นายอลัน ตันสมรส</p>
-                <p align="center">SKN 0907 </p>
+                <p>&copy; 2026 FitLife Fitness. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -363,6 +401,62 @@
             }
         });
 
+        // --- ข้อมูลตารางออกกำลังกายตามเกณฑ์ BMI ---
+        const healthPlans = {
+            underweight: {
+                title: "💪 ตารางเพิ่มน้ำหนัก & สร้างกล้ามเนื้อ",
+                dietFocus: "เน้นโปรตีนและคาร์โบไฮเดรตเชิงซ้อน ทานอาหารให้ได้แคลอรี่มากกว่าที่เผาผลาญ",
+                schedule: [
+                    { day: "จันทร์", workout: "เวทเทรนนิ่ง (อก และ หลังแขน) 45 นาที", food: "มื้อเช้า: ข้าวโอ๊ต+ไข่ต้ม | มื้อเย็น: อกไก่/ปลา + ข้าวกล้อง" },
+                    { day: "อังคาร", workout: "พักผ่อน หรือ โยคะยืดเหยียดเบาๆ", food: "เพิ่มของว่างระหว่างมื้อ เช่น ถั่ว, นม, กล้วย" },
+                    { day: "พุธ", workout: "เวทเทรนนิ่ง (หลัง และ หน้าแขน) 45 นาที", food: "มื้อหลักเน้นเนื้อสัตว์ไขมันน้อย และคาร์โบไฮเดรต" },
+                    { day: "พฤหัส", workout: "พักผ่อน", food: "ทานอาหารครบ 5 หมู่ เน้นโปรตีนให้เพียงพอ" },
+                    { day: "ศุกร์", workout: "เวทเทรนนิ่ง (ขา และ ไหล่) 45 นาที", food: "ก่อนออกกำลัง: กล้วยหอม | หลังออกกำลัง: เวย์โปรตีน/นม" },
+                    { day: "เสาร์", workout: "คาร์ดิโอเบาๆ (เดินชัน หรือ ปั่นจักรยาน) 20 นาที", food: "มื้อหลักเน้นข้าวกล้อง และปลา/ไก่" },
+                    { day: "อาทิตย์", workout: "พักผ่อนฟื้นฟูกล้ามเนื้อ", food: "ทานอาหารอิสระได้ 1 มื้อ แต่ยังเน้นโปรตีน" }
+                ]
+            },
+            normal: {
+                title: "🏃‍♂️ ตารางรักษารูปร่าง & สุขภาพโดยรวม",
+                dietFocus: "ทานอาหารให้สมดุล (Balance Diet) รักษาปริมาณแคลอรี่ให้พอดีกับที่ใช้",
+                schedule: [
+                    { day: "จันทร์", workout: "คาร์ดิโอ (วิ่ง, ปั่น) 30 นาที + เวทเทรนนิ่ง 20 นาที", food: "ทานอาหารครบ 3 มื้อ เน้นผักครึ่งนึง อย่างอื่นครึ่งนึง" },
+                    { day: "อังคาร", workout: "บอดี้เวท (วิดพื้น, สควอท, แพลงก์) 40 นาที", food: "ลดของทอด ของมัน ทานโปรตีนให้พอดีกับน้ำหนักตัว" },
+                    { day: "พุธ", workout: "พักผ่อน หรือ โยคะ 30 นาที", food: "ดื่มน้ำให้เพียงพอ 2-3 ลิตร" },
+                    { day: "พฤหัส", workout: "HIIT Cardio เผาผลาญไขมัน 25 นาที", food: "เน้นคาร์โบไฮเดรตเชิงซ้อน เช่น ข้าวกล้อง, ขนมปังโฮลวีท" },
+                    { day: "ศุกร์", workout: "เวทเทรนนิ่ง (ทั่วตัว) 45 นาที", food: "เพิ่มโปรตีนในมื้อเย็นเพื่อฟื้นฟูกล้ามเนื้อ" },
+                    { day: "เสาร์", workout: "เล่นกีฬาที่ชอบ หรือ ว่ายน้ำ 45 นาที", food: "ทานอาหารอิสระได้ตามชอบ 1 มื้อ" },
+                    { day: "อาทิตย์", workout: "พักผ่อน (Active Rest เดินเล่นรอบสวน)", food: "เตรียมอาหารสุขภาพสำหรับสัปดาห์ถัดไป" }
+                ]
+            },
+            overweight: {
+                title: "🔥 ตารางลดน้ำหนัก & เผาผลาญไขมัน",
+                dietFocus: "ลดปริมาณแคลอรี่ลงเล็กน้อย (Calorie Deficit) เลี่ยงน้ำตาลและของทอด",
+                schedule: [
+                    { day: "จันทร์", workout: "คาร์ดิโอ (เดินเร็ว หรือ วิ่งจ๊อกกิ้ง) 45 นาที", food: "มื้อเย็นงดแป้งขัดขาว เน้นสลัดผักและเนื้อปลา" },
+                    { day: "อังคาร", workout: "เวทเทรนนิ่ง (ทั่วตัว) 30 นาที", food: "ลดน้ำหวาน ชานม เปลี่ยนเป็นน้ำเปล่า หรือ ชาไม่ใส่น้ำตาล" },
+                    { day: "พุธ", workout: "คาร์ดิโอ (ปั่นจักรยาน หรือ ว่ายน้ำ) 40 นาที", food: "ทานผลไม้หวานน้อยแทนขนมขบเคี้ยว (เช่น ฝรั่ง, แอปเปิ้ล)" },
+                    { day: "พฤหัส", workout: "พักผ่อน หรือ โยคะยืดเหยียด", food: "ทานอาหารโปรตีนสูงเพื่อให้อิ่มนาน ลดความอยากอาหาร" },
+                    { day: "ศุกร์", workout: "HIIT (สลับหนัก-เบา) 25 นาที + เดินชัน 15 นาที", food: "ก่อนออกกำลัง: กาแฟดำ(ไม่หวาน) ช่วยเผาผลาญไขมัน" },
+                    { day: "เสาร์", workout: "เวทเทรนนิ่ง 30 นาที + คาร์ดิโอ 20 นาที", food: "เน้นอาหารต้ม นึ่ง ย่าง เลี่ยงอาหารผัด ทอด" },
+                    { day: "อาทิตย์", workout: "พักผ่อน หรือ ทำความสะอาดบ้าน", food: "ทานอิสระได้ 1 มื้อ แต่อย่าให้ปริมาณมากเกินไป" }
+                ]
+            },
+            obese: {
+                title: "🚶‍♂️ ตารางลดน้ำหนัก (เน้นลดแรงกระแทกข้อต่อ)",
+                dietFocus: "ควบคุมอาหารอย่างเคร่งครัด (Calorie Deficit) เน้นโปรตีนและผักใบเขียว",
+                schedule: [
+                    { day: "จันทร์", workout: "เดินเร็ว หรือ ว่ายน้ำ (ลดแรงกระแทก) 30 นาที", food: "เริ่มต้นด้วยการงดน้ำหวานและของทอดเด็ดขาด" },
+                    { day: "อังคาร", workout: "เวทเทรนนิ่งแบบนั่ง/นอน (ดัมเบลเบาๆ) 20 นาที", food: "เปลี่ยนข้าวขาวเป็นข้าวกล้อง ทานปริมาณให้พอดีอิ่ม" },
+                    { day: "พุธ", workout: "เดินแกว่งแขน หรือ ปั่นจักรยานแม่เหล็ก 30 นาที", food: "มื้อเย็นเน้นโปรตีนและผัก (เช่น สุกี้น้ำใสไก่)" },
+                    { day: "พฤหัส", workout: "พักผ่อน (ยืดเหยียดข้อต่อต่างๆ)", food: "ดื่มน้ำเปล่าก่อนมื้ออาหาร 1 แก้ว ช่วยให้อิ่มเร็วขึ้น" },
+                    { day: "ศุกร์", workout: "เดินในน้ำ หรือ แอโรบิกแบบ Low Impact 40 นาที", food: "เลี่ยงขนมจุบจิบ หากหิวให้ทานถั่วอัลมอนด์ 5-10 เม็ด" },
+                    { day: "เสาร์", workout: "เวทเทรนนิ่งเบาๆ 20 นาที + เดินช้า 20 นาที", food: "เพิ่มกากใย (ไฟเบอร์) ในทุกมื้อ ช่วยระบบขับถ่าย" },
+                    { day: "อาทิตย์", workout: "พักผ่อนเต็มที่ นอนหลับให้เพียงพอ", food: "ทานอาหารมีประโยชน์ครบ 3 มื้อ ไม่ข้ามมื้ออาหาร" }
+                ]
+            }
+        };
+
         // --- ระบบคำนวณ BMI ---
         function calculateBMI() {
             const weightInput = document.getElementById('weight').value;
@@ -391,6 +485,8 @@
             // แสดงผลเป็นทศนิยม 1 ตำแหน่ง
             scoreDiv.textContent = bmi.toFixed(1);
             
+            let planKey = "normal";
+
             // ประมวลผลหมวดหมู่ตามเกณฑ์คนเอเชีย
             resultDiv.classList.remove('hidden', 'bg-blue-900/50', 'bg-green-900/50', 'bg-yellow-900/50', 'bg-red-900/50');
             categoryDiv.classList.remove('text-blue-300', 'text-green-300', 'text-yellow-300', 'text-red-300', 'bg-blue-500/20', 'bg-green-500/20', 'bg-yellow-500/20', 'bg-red-500/20');
@@ -400,22 +496,82 @@
                 resultDiv.classList.add('bg-blue-900/50');
                 categoryDiv.classList.add('text-blue-300', 'bg-blue-500/20');
                 scoreDiv.className = "text-4xl font-bold mb-2 text-blue-400";
+                planKey = "underweight";
             } else if (bmi >= 18.5 && bmi <= 22.9) {
                 categoryDiv.textContent = "สมส่วน / สุขภาพดี";
                 resultDiv.classList.add('bg-green-900/50');
                 categoryDiv.classList.add('text-green-300', 'bg-green-500/20');
                 scoreDiv.className = "text-4xl font-bold mb-2 text-green-400";
+                planKey = "normal";
             } else if (bmi >= 23.0 && bmi <= 24.9) {
                 categoryDiv.textContent = "น้ำหนักเกิน (ท้วม)";
                 resultDiv.classList.add('bg-yellow-900/50');
                 categoryDiv.classList.add('text-yellow-300', 'bg-yellow-500/20');
                 scoreDiv.className = "text-4xl font-bold mb-2 text-yellow-400";
+                planKey = "overweight";
             } else {
                 categoryDiv.textContent = "โรคอ้วน";
                 resultDiv.classList.add('bg-red-900/50');
                 categoryDiv.classList.add('text-red-300', 'bg-red-500/20');
                 scoreDiv.className = "text-4xl font-bold mb-2 text-red-400";
+                planKey = "obese";
             }
+
+            // แสดงปุ่มดูตาราง
+            document.getElementById('view-plan-btn').classList.remove('hidden');
+            
+            // สร้างและแสดงตารางตามเกณฑ์
+            generatePlan(planKey);
+        }
+
+        // --- ระบบสร้างตารางออกกำลังกาย (ดีไซน์ใหม่) ---
+        function generatePlan(planKey) {
+            const plan = healthPlans[planKey];
+            document.getElementById('plan-title').textContent = plan.title;
+            document.getElementById('plan-diet').textContent = plan.dietFocus;
+            
+            const tbody = document.getElementById('plan-table-body');
+            tbody.innerHTML = ''; // ล้างข้อมูลเดิม
+            
+            // สีสันสำหรับแต่ละวัน
+            const dayColors = [
+                "bg-yellow-50 text-yellow-700", // จันทร์
+                "bg-pink-50 text-pink-700",   // อังคาร
+                "bg-green-50 text-green-700", // พุธ
+                "bg-orange-50 text-orange-700",// พฤหัส
+                "bg-blue-50 text-blue-700",   // ศุกร์
+                "bg-purple-50 text-purple-700",// เสาร์
+                "bg-red-50 text-red-700"      // อาทิตย์
+            ];
+
+            plan.schedule.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                // สลับสีพื้นหลังแถวเพื่อให้อ่านง่าย
+                tr.className = index % 2 === 0 ? 'bg-white hover:bg-slate-50 transition-colors' : 'bg-slate-50/50 hover:bg-slate-50 transition-colors';
+                
+                tr.innerHTML = `
+                    <td class="p-5 border-r border-slate-100 font-bold whitespace-nowrap">
+                        <span class="inline-block px-3 py-1 rounded-lg ${dayColors[index]}">${item.day}</span>
+                    </td>
+                    <td class="p-5 border-r border-slate-100 text-slate-800 font-medium">
+                        ${item.workout.includes('พัก') ? `<span class="text-slate-500"><i class="ph-fill ph-bed mr-1"></i>${item.workout}</span>` : `<span class="text-slate-800">${item.workout}</span>`}
+                    </td>
+                    <td class="p-5 text-slate-600">
+                        ${item.food}
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            // เปิดให้เห็น section ตาราง พร้อม animation
+            const planSection = document.getElementById('plan-section');
+            planSection.classList.remove('hidden');
+            
+            // ใช้ setTimeout เพื่อให้เบราว์เซอร์ลบ class hidden ก่อนเริ่ม transition opacity (เพื่อความสมูท)
+            setTimeout(() => {
+                planSection.classList.remove('opacity-0', 'translate-y-8');
+                planSection.classList.add('opacity-100', 'translate-y-0');
+            }, 50);
         }
     </script>
 </body>
