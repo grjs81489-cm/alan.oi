@@ -53,7 +53,7 @@
                     <a href="#home" onclick="backToMain()" class="hover:text-primary transition-colors">หน้าแรก</a>
                     <a href="#features" onclick="backToMain()" class="hover:text-primary transition-colors">บริการ</a>
                     <a href="#classes" onclick="backToMain()" class="hover:text-primary transition-colors">คลาสเรียน</a>
-                    <a href="#bmi" onclick="backToMain()" class="hover:text-primary transition-colors">คำนวณ BMI</a>
+                    <a href="#bmi" onclick="backToMain()" class="hover:text-primary transition-colors">คำนวณ BMI & แคลอรี่</a>
                 </div>
 
                 <!-- ปุ่มเริ่มเลย -->
@@ -76,7 +76,7 @@
                 <a href="#home" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">หน้าแรก</a>
                 <a href="#features" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">บริการ</a>
                 <a href="#classes" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คลาสเรียน</a>
-                <a href="#bmi" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คำนวณ BMI</a>
+                <a href="#bmi" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คำนวณ BMI & แคลอรี่</a>
             </div>
         </div>
     </nav>
@@ -222,7 +222,7 @@
             </div>
         </section>
 
-        <!-- ส่วนคำนวณ BMI (Interactive) -->
+        <!-- ส่วนคำนวณ BMI & แคลอรี่ (Interactive) -->
         <section id="bmi" class="py-20 bg-slate-900 text-white relative overflow-hidden">
             <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-primary/20 blur-3xl pointer-events-none"></div>
             <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-blue-500/20 blur-3xl pointer-events-none"></div>
@@ -233,7 +233,7 @@
                     <div class="w-full lg:w-1/2">
                         <h2 class="text-3xl md:text-4xl font-bold mb-6">รู้หรือไม่? ร่างกายคุณอยู่ในเกณฑ์ไหน?</h2>
                         <p class="text-slate-300 mb-8 text-lg">
-                            ดัชนีมวลกาย (BMI) เป็นมาตรวัดมาตรฐานที่ช่วยประเมินสภาวะของร่างกาย พร้อมรับตารางออกกำลังกายจัดพิเศษสำหรับคุณฟรี!
+                            ดัชนีมวลกาย (BMI) และอัตราการเผาผลาญพลังงาน (TDEE) เป็นตัวช่วยสำคัญในการประเมินสุขภาพและวางแผนการกินของคุณ พร้อมรับตารางออกกำลังกายจัดพิเศษสำหรับคุณฟรี!
                         </p>
                         <ul class="space-y-4 mb-8">
                             <li class="flex items-center gap-3 text-slate-300"><i class="ph-fill ph-check-circle text-primary text-xl"></i> น้ำหนักน้อยกว่าเกณฑ์ (BMI < 18.5)</li>
@@ -246,29 +246,67 @@
                     <!-- ฟอร์มคำนวณด้านขวา -->
                     <div class="w-full lg:w-1/2">
                         <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700 shadow-2xl">
-                            <h3 class="text-2xl font-bold mb-6 text-center">เครื่องคิดเลข BMI</h3>
-                            <div class="space-y-6">
-                                <div>
-                                    <label class="block text-sm font-medium text-slate-400 mb-2">น้ำหนัก (กิโลกรัม)</label>
-                                    <input type="number" id="weight" placeholder="เช่น 65" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-slate-400 mb-2">ส่วนสูง (เซนติเมตร)</label>
-                                    <input type="number" id="height" placeholder="เช่น 170" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                            <h3 class="text-2xl font-bold mb-6 text-center">คำนวณ BMI & พลังงานที่ใช้ต่อวัน</h3>
+                            <div class="space-y-4">
+                                <!-- เพศ และ อายุ -->
+                                <div class="flex gap-4">
+                                    <div class="w-1/2">
+                                        <label class="block text-sm font-medium text-slate-400 mb-2">เพศ</label>
+                                        <select id="gender" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                                            <option value="male">ชาย</option>
+                                            <option value="female">หญิง</option>
+                                        </select>
+                                    </div>
+                                    <div class="w-1/2">
+                                        <label class="block text-sm font-medium text-slate-400 mb-2">อายุ (ปี)</label>
+                                        <input type="number" id="age" placeholder="เช่น 25" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                                    </div>
                                 </div>
                                 
-                                <p id="bmi-error" class="text-red-400 text-sm hidden bg-red-900/30 p-3 rounded-lg border border-red-800/50 text-center"></p>
+                                <!-- น้ำหนัก และ ส่วนสูง -->
+                                <div class="flex gap-4">
+                                    <div class="w-1/2">
+                                        <label class="block text-sm font-medium text-slate-400 mb-2">น้ำหนัก (กก.)</label>
+                                        <input type="number" id="weight" placeholder="เช่น 65" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                                    </div>
+                                    <div class="w-1/2">
+                                        <label class="block text-sm font-medium text-slate-400 mb-2">ส่วนสูง (ซม.)</label>
+                                        <input type="number" id="height" placeholder="เช่น 170" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                                    </div>
+                                </div>
 
-                                <button onclick="calculateBMI()" class="w-full bg-primary hover:bg-primaryDark text-white py-4 rounded-xl font-bold text-lg transition-colors shadow-lg shadow-primary/20">
+                                <!-- กิจกรรมที่ทำเป็นประจำ -->
+                                <div>
+                                    <label class="block text-sm font-medium text-slate-400 mb-2">กิจกรรมที่ทำเป็นประจำ</label>
+                                    <select id="activity" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                                        <option value="1.2">นั่งทำงานอยู่กับที่ และไม่ได้ออกกำลังกาย</option>
+                                        <option value="1.375">ออกกำลังกายเบาๆ (1-3 วัน/สัปดาห์)</option>
+                                        <option value="1.55">ออกกำลังกายปานกลาง (3-5 วัน/สัปดาห์)</option>
+                                        <option value="1.725">ออกกำลังกายหนัก (6-7 วัน/สัปดาห์)</option>
+                                        <option value="1.9">ออกกำลังกายหนักมาก (นักกีฬา / ใช้แรงงาน)</option>
+                                    </select>
+                                </div>
+                                
+                                <p id="calc-error" class="text-red-400 text-sm hidden bg-red-900/30 p-3 rounded-lg border border-red-800/50 text-center"></p>
+
+                                <button onclick="calculateStats()" class="w-full bg-primary hover:bg-primaryDark text-white py-4 rounded-xl font-bold text-lg transition-colors shadow-lg shadow-primary/20 mt-2">
                                     คำนวณผลลัพธ์
                                 </button>
                             </div>
 
-                            <!-- ผลลัพธ์ BMI (ซ่อนไว้ก่อน) -->
-                            <div id="bmi-result" class="mt-8 p-6 rounded-xl hidden text-center transition-all duration-300">
+                            <!-- ผลลัพธ์ BMI & Calorie (ซ่อนไว้ก่อน) -->
+                            <div id="calc-result" class="mt-6 p-6 rounded-xl hidden text-center transition-all duration-300">
                                 <p class="text-sm text-slate-300 mb-1">ค่า BMI ของคุณคือ</p>
                                 <div id="bmi-score" class="text-4xl font-bold mb-2">0.0</div>
-                                <div id="bmi-category" class="inline-block px-4 py-1 rounded-full text-sm font-semibold mt-2">หมวดหมู่</div>
+                                <div id="bmi-category" class="inline-block px-4 py-1 rounded-full text-sm font-semibold mt-1 mb-4">หมวดหมู่</div>
+                                
+                                <div class="border-t border-slate-700/50 pt-4 mt-2">
+                                    <p class="text-sm text-slate-300 mb-1">พลังงานที่ควรได้รับต่อวัน (TDEE)</p>
+                                    <div class="text-3xl font-bold text-orange-400 mb-1">
+                                        <span id="tdee-score">0</span> <span class="text-lg text-slate-300 font-normal">kcal</span>
+                                    </div>
+                                    <p class="text-xs text-slate-400">BMR (พลังงานพื้นฐานเผาผลาญขณะพัก): <span id="bmr-score">0</span> kcal</p>
+                                </div>
                                 
                                 <!-- ปุ่มเด้งไปหน้าตาราง -->
                                 <button onclick="showPlanPage()" id="view-plan-btn" class="mt-6 w-full bg-gradient-to-r from-orange-400 to-yellow-500 hover:from-orange-500 hover:to-yellow-600 text-white py-3 rounded-xl font-bold transition-all transform hover:scale-[1.02] shadow-lg shadow-orange-500/30 flex justify-center items-center gap-2">
@@ -533,34 +571,59 @@
         let currentPlanKey = "normal";
         let currentBmiText = "";
 
-        // --- 4. ระบบคำนวณ BMI ---
-        function calculateBMI() {
+        // --- 4. ระบบคำนวณ BMI และ แคลอรี่ (TDEE/BMR) ---
+        function calculateStats() {
+            // รับค่าจาก input
+            const gender = document.getElementById('gender').value;
+            const ageInput = document.getElementById('age').value;
             const weightInput = document.getElementById('weight').value;
             const heightInput = document.getElementById('height').value;
-            const errorMsg = document.getElementById('bmi-error');
-            const resultDiv = document.getElementById('bmi-result');
+            const activityInput = document.getElementById('activity').value;
+            
+            const errorMsg = document.getElementById('calc-error');
+            const resultDiv = document.getElementById('calc-result');
             
             // รีเซ็ตข้อความเตือน
             errorMsg.classList.add('hidden');
 
-            if (!weightInput || !heightInput || weightInput <= 0 || heightInput <= 0) {
-                errorMsg.textContent = "⚠️ กรุณากรอกน้ำหนักและส่วนสูงให้ถูกต้อง";
+            // ตรวจสอบข้อมูลว่ากรอกครบหรือไม่
+            if (!ageInput || !weightInput || !heightInput || ageInput <= 0 || weightInput <= 0 || heightInput <= 0) {
+                errorMsg.textContent = "⚠️ กรุณากรอกอายุ, น้ำหนัก, และส่วนสูงให้ครบถ้วนและถูกต้อง";
                 errorMsg.classList.remove('hidden');
                 return;
             }
 
+            const age = parseInt(ageInput);
             const weight = parseFloat(weightInput);
-            const height = parseFloat(heightInput) / 100;
-            const bmi = weight / (height * height);
+            const height = parseFloat(heightInput); // เป็นเซนติเมตร
+            const activityMultiplier = parseFloat(activityInput);
+
+            // 1. การคำนวณ BMI
+            const heightInMeters = height / 100;
+            const bmi = weight / (heightInMeters * heightInMeters);
             
+            // 2. การคำนวณ BMR (Mifflin-St Jeor Equation)
+            let bmr = 0;
+            if (gender === 'male') {
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+            } else {
+                bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+            }
+
+            // 3. การคำนวณ TDEE (Total Daily Energy Expenditure)
+            const tdee = bmr * activityMultiplier;
+            
+            // นำผลลัพธ์ไปแสดงในหน้าจอ
             const scoreDiv = document.getElementById('bmi-score');
             const categoryDiv = document.getElementById('bmi-category');
             
             scoreDiv.textContent = bmi.toFixed(1);
+            document.getElementById('bmr-score').textContent = Math.round(bmr).toLocaleString();
+            document.getElementById('tdee-score').textContent = Math.round(tdee).toLocaleString();
             
-            // เตรียมหน้าต่างผลลัพธ์
+            // เตรียมหน้าต่างผลลัพธ์ BMI (ปรับสีและหมวดหมู่)
             resultDiv.classList.remove('hidden', 'bg-blue-900/50', 'bg-green-900/50', 'bg-yellow-900/50', 'bg-red-900/50');
-            categoryDiv.className = "inline-block px-4 py-1 rounded-full text-sm font-semibold mt-2";
+            categoryDiv.className = "inline-block px-4 py-1 rounded-full text-sm font-semibold mt-1 mb-4";
 
             if (bmi < 18.5) {
                 categoryDiv.textContent = "น้ำหนักน้อยกว่าเกณฑ์";
@@ -756,4 +819,4 @@
         }
     </script>
 </body>
-</html>
+</html>s
