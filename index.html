@@ -45,23 +45,23 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <!-- โลโก้ -->
-                <a href="#" onclick="backToMain()" class="flex items-center gap-2 text-white font-bold text-2xl tracking-wide">
+                <a href="#" onClick="backToMain()" class="flex items-center gap-2 text-white font-bold text-2xl tracking-wide">
                     <i class="ph-fill ph-barbell text-primary text-3xl"></i>
                     FitLife
                 </a>
 
                 <!-- เมนูเดสก์ท็อป -->
                 <div class="hidden md:flex space-x-8 text-white font-medium" id="nav-links">
-                    <a href="#home" onclick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">หน้าแรก</a>
-                    <a href="#features" onclick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">บริการ</a>
-                    <a href="#classes" onclick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">คลาสเรียน</a>
-                    <a href="#bmi" onclick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">คำนวณ BMI & แคลอรี่</a>
+                    <a href="#home" onClick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">หน้าแรก</a>
+                    <a href="#features" onClick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">บริการ</a>
+                    <a href="#classes" onClick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">คลาสเรียน</a>
+                    <a href="#bmi" onClick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">คำนวณ BMI & แคลอรี่</a>
                 </div>
 
                 <!-- พื้นที่เข้าสู่ระบบ (Desktop) -->
                 <div class="hidden md:flex items-center gap-4" id="nav-auth-desktop">
-                    <button onclick="openAuthModal()" class="text-white hover:text-primary font-medium transition-colors">เข้าสู่ระบบ</button>
-                    <a href="#classes" onclick="backToMain()" class="bg-primary hover:bg-primaryDark text-white px-6 py-2 rounded-full font-medium transition-colors shadow-lg shadow-primary/30">
+                    <button onClick="openAuthModal()" class="text-white hover:text-primary font-medium transition-colors">เข้าสู่ระบบ</button>
+                    <a href="#classes" onClick="backToMain()" class="bg-primary hover:bg-primaryDark text-white px-6 py-2 rounded-full font-medium transition-colors shadow-lg shadow-primary/30">
                         เริ่มกันเลย
                     </a>
                 </div>
@@ -76,12 +76,12 @@
         <!-- เมนูมือถือ -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-900 absolute top-full left-0 w-full shadow-xl">
             <div class="flex flex-col px-4 pt-2 pb-6 space-y-3 text-white">
-                <a href="#home" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">หน้าแรก</a>
-                <a href="#features" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">บริการ</a>
-                <a href="#classes" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คลาสเรียน</a>
-                <a href="#bmi" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คำนวณ BMI & แคลอรี่</a>
+                <a href="#home" onClick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">หน้าแรก</a>
+                <a href="#features" onClick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">บริการ</a>
+                <a href="#classes" onClick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คลาสเรียน</a>
+                <a href="#bmi" onClick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คำนวณ BMI & แคลอรี่</a>
                 <div class="border-t border-slate-700 my-2 pt-2" id="nav-auth-mobile">
-                    <button onclick="openAuthModal()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-primary font-bold hover:bg-slate-800">เข้าสู่ระบบ / ลงทะเบียน</button>
+                    <button onClick="openAuthModal()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-primary font-bold hover:bg-slate-800">เข้าสู่ระบบ / ลงทะเบียน</button>
                 </div>
             </div>
         </div>
@@ -160,7 +160,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- คลาส 1 -->
-                    <div onclick="openClassModal('weight')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
+                    <div onClick="openClassModal('weight')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
                         <div class="h-64 overflow-hidden relative">
                             <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000&auto=format&fit=crop" alt="เวทเทรนนิ่ง" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
@@ -182,7 +182,7 @@
                     </div>
 
                     <!-- คลาส 2 -->
-                    <div onclick="openClassModal('yoga')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
+                    <div onClick="openClassModal('yoga')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
                         <div class="h-64 overflow-hidden relative">
                             <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1000&auto=format&fit=crop" alt="โยคะ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
@@ -204,7 +204,7 @@
                     </div>
 
                     <!-- คลาส 3 -->
-                    <div onclick="openClassModal('hiit')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
+                    <div onClick="openClassModal('hiit')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
                         <div class="h-64 overflow-hidden relative">
                             <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop" alt="คาร์ดิโอ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
@@ -292,7 +292,7 @@
                                 
                                 <p id="calc-error" class="text-red-400 text-sm hidden bg-red-900/30 p-3 rounded-lg border border-red-800/50 text-center"></p>
 
-                                <button onclick="calculateStats()" class="w-full bg-primary hover:bg-primaryDark text-white py-4 rounded-xl font-bold text-lg transition-colors shadow-lg shadow-primary/20 mt-2">
+                                <button onClick="calculateStats()" class="w-full bg-primary hover:bg-primaryDark text-white py-4 rounded-xl font-bold text-lg transition-colors shadow-lg shadow-primary/20 mt-2">
                                     คำนวณผลลัพธ์
                                 </button>
                             </div>
@@ -312,7 +312,7 @@
                                 </div>
                                 
                                 <!-- ปุ่มดูตาราง -->
-                                <button onclick="showPlanPage()" id="view-plan-btn" class="mt-6 w-full bg-gradient-to-r from-orange-400 to-yellow-500 hover:from-orange-500 hover:to-yellow-600 text-white py-3 rounded-xl font-bold transition-all transform hover:scale-[1.02] shadow-lg shadow-orange-500/30 flex justify-center items-center gap-2">
+                                <button onClick="showPlanPage()" id="view-plan-btn" class="mt-6 w-full bg-gradient-to-r from-orange-400 to-yellow-500 hover:from-orange-500 hover:to-yellow-600 text-white py-3 rounded-xl font-bold transition-all transform hover:scale-[1.02] shadow-lg shadow-orange-500/30 flex justify-center items-center gap-2">
                                     <i class="ph-bold ph-calendar-check text-xl"></i> ดูตารางแนะนำ 1 สัปดาห์
                                 </button>
                             </div>
@@ -352,7 +352,7 @@
     <div id="plan-page" class="hidden min-h-screen pt-24 pb-12 bg-slate-50 transition-opacity duration-500 opacity-0">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
-                <button onclick="backToMain()" class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2 self-start sm:self-auto">
+                <button onClick="backToMain()" class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2 self-start sm:self-auto">
                     <i class="ph-bold ph-arrow-left"></i> ย้อนกลับไปหน้าหลัก
                 </button>
                 <div class="text-right hidden sm:block">
@@ -390,10 +390,10 @@
                 </div>
                 
                 <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-                    <button onclick="window.print()" class="bg-white border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-full font-bold transition-colors shadow-sm inline-flex items-center justify-center gap-2">
+                    <button onClick="window.print()" class="bg-white border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-full font-bold transition-colors shadow-sm inline-flex items-center justify-center gap-2">
                         <i class="ph-bold ph-printer text-xl"></i> พิมพ์ตารางนี้
                     </button>
-                    <button onclick="backToMain()" class="bg-slate-900 text-white hover:bg-slate-800 px-8 py-3 rounded-full font-bold transition-colors shadow-lg inline-flex items-center justify-center gap-2">
+                    <button onClick="backToMain()" class="bg-slate-900 text-white hover:bg-slate-800 px-8 py-3 rounded-full font-bold transition-colors shadow-lg inline-flex items-center justify-center gap-2">
                         ดูคลาสที่น่าสนใจต่อ <i class="ph-bold ph-arrow-right text-xl"></i>
                     </button>
                 </div>
@@ -408,10 +408,10 @@
             <div class="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
                 <h2 class="text-3xl font-bold text-slate-900"><i class="ph-fill ph-shield-check text-primary"></i> ระบบจัดการสำหรับแอดมิน</h2>
                 <div class="flex flex-wrap gap-3">
-                    <button onclick="exportToCSV()" class="bg-green-600 border border-green-700 text-white hover:bg-green-700 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
+                    <button onClick="exportToCSV()" class="bg-green-600 border border-green-700 text-white hover:bg-green-700 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
                         <i class="ph-bold ph-file-csv"></i> โหลดไฟล์รายงาน (Excel)
                     </button>
-                    <button onclick="backToMainFromAdmin()" class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
+                    <button onClick="backToMainFromAdmin()" class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
                         <i class="ph-bold ph-arrow-left"></i> กลับหน้าหลัก
                     </button>
                 </div>
@@ -427,7 +427,7 @@
                     <!-- เครื่องมือค้นหาและกรอง (Search & Filter) -->
                     <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                         <!-- ตัวกรองเพศ -->
-                        <select id="admin-filter-gender" onchange="filterAdminTable()" class="block w-full sm:w-32 px-3 py-2 border border-slate-300 rounded-xl leading-5 bg-white text-slate-700 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors shadow-sm">
+                        <select id="admin-filter-gender" onChange="filterAdminTable()" class="block w-full sm:w-32 px-3 py-2 border border-slate-300 rounded-xl leading-5 bg-white text-slate-700 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors shadow-sm">
                             <option value="all">ทุกเพศ</option>
                             <option value="ชาย">ชาย</option>
                             <option value="หญิง">หญิง</option>
@@ -439,7 +439,7 @@
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <i class="ph-bold ph-magnifying-glass text-slate-400"></i>
                             </div>
-                            <input type="text" id="admin-search" onkeyup="filterAdminTable()" placeholder="ค้นหาชื่อ, Username..." class="block w-full pl-10 pr-3 py-2 border border-slate-300 rounded-xl leading-5 bg-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors shadow-sm">
+                            <input type="text" id="admin-search" onKeyUp="filterAdminTable()" placeholder="ค้นหาชื่อ, Username..." class="block w-full pl-10 pr-3 py-2 border border-slate-300 rounded-xl leading-5 bg-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors shadow-sm">
                         </div>
                     </div>
                 </div>
@@ -469,9 +469,9 @@
 
     <!-- ================= Modal สำหรับดูรายละเอียดคลาส ================= -->
     <div id="class-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 sm:p-6">
-        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeClassModal()"></div>
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onClick="closeClassModal()"></div>
         <div class="bg-white rounded-3xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative z-10 shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="class-modal-content">
-            <button onclick="closeClassModal()" class="absolute top-4 right-4 w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center text-white hover:bg-black/60 transition-colors z-20">
+            <button onClick="closeClassModal()" class="absolute top-4 right-4 w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center text-white hover:bg-black/60 transition-colors z-20">
                 <i class="ph-bold ph-x text-lg"></i>
             </button>
             <div id="class-modal-body"></div>
@@ -481,9 +481,9 @@
 
     <!-- ================= Modal สำหรับเข้าสู่ระบบ/ลงทะเบียน ================= -->
     <div id="auth-modal" class="fixed inset-0 z-[110] hidden flex items-center justify-center p-4 sm:p-6">
-        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity" onclick="closeAuthModal()"></div>
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity" onClick="closeAuthModal()"></div>
         <div class="bg-white rounded-3xl w-full max-w-md relative z-10 shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="auth-modal-content">
-            <button onclick="closeAuthModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-slate-200 transition-colors z-20">
+            <button onClick="closeAuthModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-slate-200 transition-colors z-20">
                 <i class="ph-bold ph-x"></i>
             </button>
             
@@ -495,8 +495,8 @@
                 </div>
                 
                 <div class="flex rounded-lg bg-slate-100 p-1 mb-6">
-                    <button onclick="switchAuthTab('login')" id="tab-login" class="flex-1 py-2 rounded-md font-bold text-sm bg-white shadow text-slate-900 transition-all">เข้าสู่ระบบ</button>
-                    <button onclick="switchAuthTab('register')" id="tab-register" class="flex-1 py-2 rounded-md font-bold text-sm text-slate-500 hover:text-slate-900 transition-all">ลงทะเบียนใหม่</button>
+                    <button onClick="switchAuthTab('login')" id="tab-login" class="flex-1 py-2 rounded-md font-bold text-sm bg-white shadow text-slate-900 transition-all">เข้าสู่ระบบ</button>
+                    <button onClick="switchAuthTab('register')" id="tab-register" class="flex-1 py-2 rounded-md font-bold text-sm text-slate-500 hover:text-slate-900 transition-all">ลงทะเบียนใหม่</button>
                 </div>
 
                 <!-- ฟอร์มเข้าสู่ระบบ -->
@@ -510,7 +510,7 @@
                         <input type="password" id="login-password" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
                     </div>
                     <p id="login-error" class="text-red-500 text-sm hidden bg-red-50 border border-red-100 p-2 rounded-lg text-center"></p>
-                    <button onclick="handleLogin()" class="w-full bg-slate-900 hover:bg-slate-800 text-white py-3 rounded-xl font-bold transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
+                    <button onClick="handleLogin()" class="w-full bg-slate-900 hover:bg-slate-800 text-white py-3 rounded-xl font-bold transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
                         <span id="login-btn-text">เข้าสู่ระบบ</span>
                     </button>
                 </div>
@@ -538,7 +538,7 @@
                         <input type="password" id="reg-password" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
                     </div>
                     <p id="reg-error" class="text-red-500 text-sm hidden bg-red-50 border border-red-100 p-2 rounded-lg text-center"></p>
-                    <button onclick="handleRegister()" class="w-full bg-primary hover:bg-primaryDark text-white py-3 rounded-xl font-bold transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
+                    <button onClick="handleRegister()" class="w-full bg-primary hover:bg-primaryDark text-white py-3 rounded-xl font-bold transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
                         <span id="reg-btn-text">สร้างบัญชีผู้ใช้</span>
                     </button>
                 </div>
@@ -553,13 +553,13 @@
             <div class="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
                 <h2 class="text-3xl font-bold text-slate-900"><i class="ph-fill ph-shield-check text-primary"></i> ระบบจัดการสำหรับแอดมิน</h2>
                 <div class="flex flex-wrap gap-3">
-                    <button onclick="openAddAdminModal()" class="bg-blue-600 border border-blue-700 text-white hover:bg-blue-700 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
+                    <button onClick="openAddAdminModal()" class="bg-blue-600 border border-blue-700 text-white hover:bg-blue-700 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
                         <i class="ph-bold ph-user-plus"></i> เพิ่มแอดมิน
                     </button>
-                    <button onclick="exportToCSV()" class="bg-green-600 border border-green-700 text-white hover:bg-green-700 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
+                    <button onClick="exportToCSV()" class="bg-green-600 border border-green-700 text-white hover:bg-green-700 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
                         <i class="ph-bold ph-file-csv"></i> โหลดไฟล์รายงาน (Excel)
                     </button>
-                    <button onclick="backToMainFromAdmin()" class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
+                    <button onClick="backToMainFromAdmin()" class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
                         <i class="ph-bold ph-arrow-left"></i> กลับหน้าหลัก
                     </button>
                 </div>
@@ -578,7 +578,7 @@
             <h3 class="text-xl font-bold text-slate-900 mb-2">ยืนยันการลบ</h3>
             <p class="text-slate-600 mb-6" id="confirm-modal-text">คุณแน่ใจหรือไม่?</p>
             <div class="flex gap-3 justify-center">
-                <button onclick="hideCustomConfirm()" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 py-3 rounded-xl font-bold transition-colors">ยกเลิก</button>
+                <button onClick="hideCustomConfirm()" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 py-3 rounded-xl font-bold transition-colors">ยกเลิก</button>
                 <button id="confirm-ok-btn" class="flex-1 bg-red-500 hover:bg-red-600 text-white py-3 rounded-xl font-bold transition-colors shadow-lg shadow-red-500/30">ลบข้อมูล</button>
             </div>
         </div>
@@ -587,9 +587,9 @@
 
     <!-- ================= Modal เพิ่มแอดมิน ================= -->
     <div id="add-admin-modal" class="fixed inset-0 z-[125] hidden flex items-center justify-center p-4 sm:p-6">
-        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeAddAdminModal()"></div>
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onClick="closeAddAdminModal()"></div>
         <div class="bg-white rounded-3xl w-full max-w-md relative z-10 shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="add-admin-modal-content">
-            <button onclick="closeAddAdminModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-slate-200 transition-colors z-20">
+            <button onClick="closeAddAdminModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-slate-200 transition-colors z-20">
                 <i class="ph-bold ph-x"></i>
             </button>
             
@@ -616,7 +616,7 @@
                     </div>
                     <p id="add-admin-error" class="text-red-500 text-sm hidden bg-red-50 border border-red-100 p-2 rounded-lg text-center"></p>
                     <p id="add-admin-success" class="text-green-600 text-sm hidden bg-green-50 border border-green-100 p-2 rounded-lg text-center"></p>
-                    <button onclick="handleAddAdmin()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
+                    <button onClick="handleAddAdmin()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
                         <span id="add-admin-btn-text">สร้างบัญชีแอดมิน</span>
                     </button>
                 </div>
@@ -624,83 +624,38 @@
         </div>
     </div>
 
+    <!-- ================= JavaScript (เชื่อมต่อ Google Sheets) ================= -->
+    <script>
+        // นำ URL ของ Web App ที่ได้จาก Google Apps Script มาใส่ตรงนี้
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzGhtYj_qQ75odEu2YmMggxtdstV1SurM200e_8Se2euKg2hBgwP7RTzGcksz0Fr-ywWg/exec';
 
-    <!-- ================= JavaScript (Logic + Firebase Modules) ================= -->
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, doc, getDoc, setDoc, updateDoc, collection, getDocs, deleteDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
-        // ---- ตัวแปรระบบ (State) ----
-        let app, db, auth;
-        let isFirebaseActive = false;
-        let usersDB = [{ name: "ผู้ดูแลระบบ", gender: "-", username: "admin", password: "1234", role: "admin", lastBmi: "-", lastPlan: "-" }]; // Local Database Fallback
+        // ---- ตัวแปรระบบ ----
+        let usersDB = []; 
         let currentUser = null; 
         let currentPlanKey = "normal";
         let currentBmiText = "";
-        let globalUserList = []; // สำหรับแอดมินค้นหาและโหลด CSV
+        let globalUserList = [];
 
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'fitlife-app';
-
-        // ---- เริ่มต้นเชื่อมต่อ Firebase ----
+        // โหลดข้อมูลผู้ใช้จาก Google Sheets ทันทีที่เปิดเว็บ
         async function initDB() {
-            if (typeof __firebase_config === 'undefined') {
-                console.warn("รันแบบ Local (ไม่มี Firebase Config) จะใช้ In-Memory Database แทน");
-                return;
-            }
             try {
-                const firebaseConfig = JSON.parse(__firebase_config);
-                app = initializeApp(firebaseConfig);
-                db = getFirestore(app);
-                auth = getAuth(app);
-
-                if (typeof __initial_auth_token !== 'undefined') {
-                    await signInWithCustomToken(auth, __initial_auth_token);
-                } else {
-                    await signInAnonymously(auth);
+                if (SCRIPT_URL.includes('วาง_URL')) {
+                    console.warn("ยังไม่ได้ใส่ SCRIPT_URL จะใช้ข้อมูลจำลองแทน");
+                    usersDB = [{ name: "ผู้ดูแลระบบ", gender: "-", username: "admin", password: "1234", role: "admin", lastBmi: "-", lastPlan: "-" }];
+                    return;
                 }
-
-                isFirebaseActive = true;
-                
-                // ตรวจสอบแอดมินใน Cloud
-                const adminRef = doc(db, 'artifacts', appId, 'public', 'data', 'users', 'admin');
-                const adminSnap = await getDoc(adminRef);
-                if (!adminSnap.exists()) {
-                    await setDoc(adminRef, usersDB[0]);
-                }
-                console.log("เชื่อมต่อ Firebase สำเร็จ");
+                const response = await fetch(SCRIPT_URL);
+                const data = await response.json();
+                usersDB = data;
+                console.log("โหลดข้อมูลจาก Google Sheets สำเร็จ");
             } catch (e) {
-                console.error("Firebase Init Error:", e);
-                console.warn("สลับไปใช้ Local Database");
+                console.error("โหลดข้อมูลล้มเหลว:", e);
+                alert("ไม่สามารถเชื่อมต่อฐานข้อมูลได้");
             }
         }
-        // เรียกใช้ฟังก์ชันทันทีเมื่อโหลดสคริปต์
         initDB();
 
-        // ------------------ ผูกฟังก์ชันเข้ากับ window Object (จำเป็นสำหรับ type="module") ------------------
-        window.backToMain = backToMain;
-        window.calculateStats = calculateStats;
-        window.showPlanPage = showPlanPage;
-        window.openClassModal = openClassModal;
-        window.closeClassModal = closeClassModal;
-        window.mockBooking = mockBooking;
-        window.openAuthModal = openAuthModal;
-        window.closeAuthModal = closeAuthModal;
-        window.switchAuthTab = switchAuthTab;
-        window.handleLogin = handleLogin;
-        window.handleRegister = handleRegister;
-        window.logout = logout;
-        window.showAdminPage = showAdminPage;
-        window.backToMainFromAdmin = backToMainFromAdmin;
-        window.exportToCSV = exportToCSV;
-        window.filterAdminTable = filterAdminTable;
-        window.deleteUser = deleteUser;
-        window.hideCustomConfirm = hideCustomConfirm;
-        window.openAddAdminModal = openAddAdminModal;
-        window.closeAddAdminModal = closeAddAdminModal;
-        window.handleAddAdmin = handleAddAdmin;
-
-        // ------------------ จัดการ UI พื้นฐาน (Mobile Menu & Navbar) ------------------
+        // ------------------ จัดการ UI พื้นฐาน ------------------
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
@@ -725,8 +680,7 @@
             
             if (currentUser) {
                 let adminBtn = currentUser.role === 'admin' 
-                    ? `<button onclick="showAdminPage()" class="text-orange-400 font-bold hover:text-orange-300 transition-colors flex items-center gap-1"><i class="ph-fill ph-shield-check text-xl"></i> แอดมิน</button>` 
-                    : '';
+                    ? `<button onclick="showAdminPage()" class="text-orange-400 font-bold hover:text-orange-300 transition-colors flex items-center gap-1"><i class="ph-fill ph-shield-check text-xl"></i> แอดมิน</button>` : '';
                     
                 desktopNav.innerHTML = `
                     ${adminBtn}
@@ -737,8 +691,7 @@
                 `;
 
                 let adminBtnMobile = currentUser.role === 'admin' 
-                    ? `<button onclick="showAdminPage()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-orange-400 font-bold hover:bg-slate-800"><i class="ph-fill ph-shield-check"></i> หน้าจัดการแอดมิน</button>` 
-                    : '';
+                    ? `<button onclick="showAdminPage()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-orange-400 font-bold hover:bg-slate-800"><i class="ph-fill ph-shield-check"></i> หน้าจัดการแอดมิน</button>` : '';
 
                 mobileNav.innerHTML = `
                     ${adminBtnMobile}
@@ -755,49 +708,39 @@
                 `;
             }
         }
-        updateNavAuthUI(); // รันครั้งแรก
+        updateNavAuthUI();
 
-        // ------------------ ระบบ Authentication (เข้าสู่ระบบ / ลงทะเบียน) ------------------
+        // ------------------ ระบบ Authentication ------------------
         function openAuthModal() {
             switchAuthTab('login');
-            const modal = document.getElementById('auth-modal');
-            const modalContent = document.getElementById('auth-modal-content');
-            modal.classList.remove('hidden');
+            document.getElementById('auth-modal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
             setTimeout(() => {
-                modalContent.classList.remove('scale-95', 'opacity-0');
-                modalContent.classList.add('scale-100', 'opacity-100');
+                document.getElementById('auth-modal-content').classList.remove('scale-95', 'opacity-0');
+                document.getElementById('auth-modal-content').classList.add('scale-100', 'opacity-100');
             }, 10);
         }
 
         function closeAuthModal() {
-            const modal = document.getElementById('auth-modal');
-            const modalContent = document.getElementById('auth-modal-content');
-            modalContent.classList.remove('scale-100', 'opacity-100');
-            modalContent.classList.add('scale-95', 'opacity-0');
+            document.getElementById('auth-modal-content').classList.remove('scale-100', 'opacity-100');
+            document.getElementById('auth-modal-content').classList.add('scale-95', 'opacity-0');
             document.body.style.overflow = '';
-            setTimeout(() => modal.classList.add('hidden'), 300);
+            setTimeout(() => document.getElementById('auth-modal').classList.add('hidden'), 300);
         }
 
         function switchAuthTab(tab) {
-            const loginBtn = document.getElementById('tab-login');
-            const regBtn = document.getElementById('tab-register');
-            const loginForm = document.getElementById('form-login');
-            const regForm = document.getElementById('form-register');
-            
             document.getElementById('login-error').classList.add('hidden');
             document.getElementById('reg-error').classList.add('hidden');
-            
             if (tab === 'login') {
-                loginBtn.className = "flex-1 py-2 rounded-md font-bold text-sm bg-white shadow text-slate-900 transition-all";
-                regBtn.className = "flex-1 py-2 rounded-md font-bold text-sm text-slate-500 hover:text-slate-900 transition-all";
-                loginForm.classList.remove('hidden');
-                regForm.classList.add('hidden');
+                document.getElementById('tab-login').className = "flex-1 py-2 rounded-md font-bold text-sm bg-white shadow text-slate-900 transition-all";
+                document.getElementById('tab-register').className = "flex-1 py-2 rounded-md font-bold text-sm text-slate-500 hover:text-slate-900 transition-all";
+                document.getElementById('form-login').classList.remove('hidden');
+                document.getElementById('form-register').classList.add('hidden');
             } else {
-                regBtn.className = "flex-1 py-2 rounded-md font-bold text-sm bg-white shadow text-slate-900 transition-all";
-                loginBtn.className = "flex-1 py-2 rounded-md font-bold text-sm text-slate-500 hover:text-slate-900 transition-all";
-                regForm.classList.remove('hidden');
-                loginForm.classList.add('hidden');
+                document.getElementById('tab-register').className = "flex-1 py-2 rounded-md font-bold text-sm bg-white shadow text-slate-900 transition-all";
+                document.getElementById('tab-login').className = "flex-1 py-2 rounded-md font-bold text-sm text-slate-500 hover:text-slate-900 transition-all";
+                document.getElementById('form-register').classList.remove('hidden');
+                document.getElementById('form-login').classList.add('hidden');
             }
         }
 
@@ -808,44 +751,26 @@
             const btnText = document.getElementById('login-btn-text');
             
             if (!userVal || !passVal) {
-                err.textContent = "กรุณากรอกข้อมูลให้ครบถ้วน";
-                err.classList.remove('hidden');
-                return;
+                err.textContent = "กรุณากรอกข้อมูลให้ครบถ้วน"; err.classList.remove('hidden'); return;
             }
             
             btnText.textContent = "กำลังตรวจสอบ...";
-            let userFound = null;
+            await initDB(); // อัปเดตข้อมูลล่าสุดจาก Google Sheets
 
-            try {
-                if (isFirebaseActive) {
-                    const userRef = doc(db, 'artifacts', appId, 'public', 'data', 'users', userVal);
-                    const userSnap = await getDoc(userRef);
-                    if (userSnap.exists() && userSnap.data().password === passVal) {
-                        userFound = userSnap.data();
-                    }
-                } else {
-                    userFound = usersDB.find(u => u.username === userVal && u.password === passVal);
-                }
+            const userFound = usersDB.find(u => u.username === userVal && u.password === String(passVal));
 
-                if (userFound) {
-                    currentUser = userFound;
-                    updateNavAuthUI();
-                    closeAuthModal();
-                    
-                    if (currentUser.role === 'admin') {
-                        showAdminPage();
-                    } else if (document.getElementById('bmi-score').textContent !== "0.0") {
-                        // ถ้าคำนวณ BMI ไว้ก่อนล็อกอิน ให้ดึงมาบันทึกลงโปรไฟล์ด้วย
-                        currentUser.lastBmi = currentBmiText;
-                        currentUser.lastPlan = healthPlans[currentPlanKey].title;
-                        showPlanPage();
-                    }
-                } else {
-                    err.textContent = "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง";
-                    err.classList.remove('hidden');
+            if (userFound) {
+                currentUser = userFound;
+                updateNavAuthUI();
+                closeAuthModal();
+                if (currentUser.role === 'admin') {
+                    showAdminPage();
+                } else if (document.getElementById('bmi-score').textContent !== "0.0") {
+                    saveBmiToGoogleSheets();
+                    showPlanPage();
                 }
-            } catch(e) {
-                err.textContent = "เกิดข้อผิดพลาดในการเชื่อมต่อฐานข้อมูล";
+            } else {
+                err.textContent = "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง";
                 err.classList.remove('hidden');
             }
             btnText.textContent = "เข้าสู่ระบบ";
@@ -853,66 +778,42 @@
 
         async function handleRegister() {
             const nameVal = document.getElementById('reg-name').value.trim();
-            const genderVal = document.getElementById('reg-gender').value; // ดึงค่าเพศ
+            const genderVal = document.getElementById('reg-gender').value;
             const userVal = document.getElementById('reg-username').value.trim();
             const passVal = document.getElementById('reg-password').value.trim();
             const err = document.getElementById('reg-error');
             const btnText = document.getElementById('reg-btn-text');
             
             if (!nameVal || !userVal || !passVal) {
-                err.textContent = "กรุณากรอกข้อมูลให้ครบถ้วน";
-                err.classList.remove('hidden');
-                return;
+                err.textContent = "กรุณากรอกข้อมูลให้ครบถ้วน"; err.classList.remove('hidden'); return;
             }
             
             btnText.textContent = "กำลังบันทึก...";
-            
-            const newUser = { 
-                name: nameVal, 
-                gender: genderVal, // บันทึกเพศลง DB
-                username: userVal, 
-                password: passVal, 
-                role: "user", 
-                lastBmi: "-", 
-                lastPlan: "-" 
-            };
+            await initDB(); 
 
-            try {
-                if (isFirebaseActive) {
-                    const userRef = doc(db, 'artifacts', appId, 'public', 'data', 'users', userVal);
-                    const userSnap = await getDoc(userRef);
-                    if (userSnap.exists()) {
-                        err.textContent = "ชื่อผู้ใช้นี้มีคนใช้แล้ว กรุณาใช้ชื่ออื่น";
-                        err.classList.remove('hidden');
-                        btnText.textContent = "สร้างบัญชีผู้ใช้";
-                        return;
-                    }
-                    await setDoc(userRef, newUser);
-                    currentUser = newUser;
-                } else {
-                    if (usersDB.find(u => u.username === userVal)) {
-                        err.textContent = "ชื่อผู้ใช้นี้มีคนใช้แล้ว กรุณาใช้ชื่ออื่น";
-                        err.classList.remove('hidden');
-                        btnText.textContent = "สร้างบัญชีผู้ใช้";
-                        return;
-                    }
-                    usersDB.push(newUser);
-                    currentUser = newUser;
-                }
-
-                updateNavAuthUI();
-                closeAuthModal();
-                
-                if (document.getElementById('bmi-score').textContent !== "0.0") {
-                    currentUser.lastBmi = currentBmiText;
-                    currentUser.lastPlan = healthPlans[currentPlanKey].title;
-                    showPlanPage();
-                } else {
-                    document.getElementById('bmi').scrollIntoView({behavior: 'smooth'});
-                }
-            } catch(e) {
-                err.textContent = "เกิดข้อผิดพลาดในการบันทึกข้อมูล";
+            if (usersDB.find(u => u.username === userVal)) {
+                err.textContent = "ชื่อผู้ใช้นี้มีคนใช้แล้ว กรุณาใช้ชื่ออื่น";
                 err.classList.remove('hidden');
+                btnText.textContent = "สร้างบัญชีผู้ใช้";
+                return;
+            }
+
+            const newUser = { action: 'register', name: nameVal, gender: genderVal, username: userVal, password: passVal, role: "user", lastBmi: "-", lastPlan: "-" };
+            
+            if (!SCRIPT_URL.includes('วาง_URL')) {
+                await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(newUser) });
+            }
+            
+            usersDB.push(newUser);
+            currentUser = newUser;
+            updateNavAuthUI();
+            closeAuthModal();
+            
+            if (document.getElementById('bmi-score').textContent !== "0.0") {
+                saveBmiToGoogleSheets();
+                showPlanPage();
+            } else {
+                document.getElementById('bmi').scrollIntoView({behavior: 'smooth'});
             }
             btnText.textContent = "สร้างบัญชีผู้ใช้";
         }
@@ -924,38 +825,38 @@
             backToMain();
         }
 
-        // ------------------ ระบบคำนวณ BMI และ แคลอรี่ ------------------
+        // ------------------ ระบบคำนวณและบันทึก BMI ลง Google Sheets ------------------
+        async function saveBmiToGoogleSheets() {
+            currentUser.lastBmi = currentBmiText;
+            currentUser.lastPlan = healthPlans[currentPlanKey].title;
+            
+            if (!SCRIPT_URL.includes('วาง_URL')) {
+                const updateData = { action: 'updateBmi', username: currentUser.username, lastBmi: currentUser.lastBmi, lastPlan: currentUser.lastPlan };
+                fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(updateData) });
+            }
+        }
+
         async function calculateStats() {
             const gender = document.getElementById('gender').value;
             const ageInput = document.getElementById('age').value;
             const weightInput = document.getElementById('weight').value;
             const heightInput = document.getElementById('height').value;
             const activityInput = document.getElementById('activity').value;
-            
             const errorMsg = document.getElementById('calc-error');
             const resultDiv = document.getElementById('calc-result');
             errorMsg.classList.add('hidden');
 
-            if (!ageInput || !weightInput || !heightInput || ageInput <= 0 || weightInput <= 0 || heightInput <= 0) {
-                errorMsg.textContent = "⚠️ กรุณากรอกอายุ, น้ำหนัก, และส่วนสูงให้ครบถ้วนและถูกต้อง";
-                errorMsg.classList.remove('hidden');
-                return;
+            if (!ageInput || !weightInput || !heightInput) {
+                errorMsg.textContent = "⚠️ กรุณากรอกอายุ, น้ำหนัก, และส่วนสูงให้ครบถ้วน";
+                errorMsg.classList.remove('hidden'); return;
             }
 
-            const age = parseInt(ageInput);
-            const weight = parseFloat(weightInput);
-            const height = parseFloat(heightInput); 
-            const activityMultiplier = parseFloat(activityInput);
-
-            const heightInMeters = height / 100;
-            const bmi = weight / (heightInMeters * heightInMeters);
-            
-            let bmr = (gender === 'male') ? (10 * weight) + (6.25 * height) - (5 * age) + 5 : (10 * weight) + (6.25 * height) - (5 * age) - 161;
-            const tdee = bmr * activityMultiplier;
+            const bmi = weightInput / ((heightInput/100) * (heightInput/100));
+            let bmr = (gender === 'male') ? (10 * weightInput) + (6.25 * heightInput) - (5 * ageInput) + 5 : (10 * weightInput) + (6.25 * heightInput) - (5 * ageInput) - 161;
+            const tdee = bmr * activityInput;
             
             const scoreDiv = document.getElementById('bmi-score');
             const categoryDiv = document.getElementById('bmi-category');
-            
             scoreDiv.textContent = bmi.toFixed(1);
             document.getElementById('bmr-score').textContent = Math.round(bmr).toLocaleString();
             document.getElementById('tdee-score').textContent = Math.round(tdee).toLocaleString();
@@ -964,50 +865,16 @@
             categoryDiv.className = "inline-block px-4 py-1 rounded-full text-sm font-semibold mt-1 mb-4";
 
             if (bmi < 18.5) {
-                categoryDiv.textContent = "น้ำหนักน้อยกว่าเกณฑ์";
-                resultDiv.classList.add('bg-blue-900/50');
-                categoryDiv.classList.add('text-blue-300', 'bg-blue-500/20');
-                scoreDiv.className = "text-4xl font-bold mb-2 text-blue-400";
-                currentPlanKey = "underweight";
-                currentBmiText = `BMI ${bmi.toFixed(1)} (น้ำหนักน้อย)`;
-            } else if (bmi >= 18.5 && bmi <= 22.9) {
-                categoryDiv.textContent = "สมส่วน / สุขภาพดี";
-                resultDiv.classList.add('bg-green-900/50');
-                categoryDiv.classList.add('text-green-300', 'bg-green-500/20');
-                scoreDiv.className = "text-4xl font-bold mb-2 text-green-400";
-                currentPlanKey = "normal";
-                currentBmiText = `BMI ${bmi.toFixed(1)} (สมส่วน)`;
-            } else if (bmi >= 23.0 && bmi <= 24.9) {
-                categoryDiv.textContent = "น้ำหนักเกิน (ท้วม)";
-                resultDiv.classList.add('bg-yellow-900/50');
-                categoryDiv.classList.add('text-yellow-300', 'bg-yellow-500/20');
-                scoreDiv.className = "text-4xl font-bold mb-2 text-yellow-400";
-                currentPlanKey = "overweight";
-                currentBmiText = `BMI ${bmi.toFixed(1)} (น้ำหนักเกิน)`;
+                categoryDiv.textContent = "น้ำหนักน้อยกว่าเกณฑ์"; resultDiv.classList.add('bg-blue-900/50'); categoryDiv.classList.add('text-blue-300', 'bg-blue-500/20'); scoreDiv.className = "text-4xl font-bold mb-2 text-blue-400"; currentPlanKey = "underweight"; currentBmiText = `BMI ${bmi.toFixed(1)} (น้อย)`;
+            } else if (bmi <= 22.9) {
+                categoryDiv.textContent = "สมส่วน / สุขภาพดี"; resultDiv.classList.add('bg-green-900/50'); categoryDiv.classList.add('text-green-300', 'bg-green-500/20'); scoreDiv.className = "text-4xl font-bold mb-2 text-green-400"; currentPlanKey = "normal"; currentBmiText = `BMI ${bmi.toFixed(1)} (สมส่วน)`;
+            } else if (bmi <= 24.9) {
+                categoryDiv.textContent = "น้ำหนักเกิน (ท้วม)"; resultDiv.classList.add('bg-yellow-900/50'); categoryDiv.classList.add('text-yellow-300', 'bg-yellow-500/20'); scoreDiv.className = "text-4xl font-bold mb-2 text-yellow-400"; currentPlanKey = "overweight"; currentBmiText = `BMI ${bmi.toFixed(1)} (เกิน)`;
             } else {
-                categoryDiv.textContent = "โรคอ้วน";
-                resultDiv.classList.add('bg-red-900/50');
-                categoryDiv.classList.add('text-red-300', 'bg-red-500/20');
-                scoreDiv.className = "text-4xl font-bold mb-2 text-red-400";
-                currentPlanKey = "obese";
-                currentBmiText = `BMI ${bmi.toFixed(1)} (โรคอ้วน)`;
+                categoryDiv.textContent = "โรคอ้วน"; resultDiv.classList.add('bg-red-900/50'); categoryDiv.classList.add('text-red-300', 'bg-red-500/20'); scoreDiv.className = "text-4xl font-bold mb-2 text-red-400"; currentPlanKey = "obese"; currentBmiText = `BMI ${bmi.toFixed(1)} (อ้วน)`;
             }
 
-            // ถ้าล็อกอินอยู่ ให้อัปเดตข้อมูลขึ้นฐานข้อมูลทันที
-            if (currentUser && currentUser.role !== 'admin') {
-                currentUser.lastBmi = currentBmiText;
-                currentUser.lastPlan = healthPlans[currentPlanKey].title;
-                
-                if (isFirebaseActive) {
-                    try {
-                        const userRef = doc(db, 'artifacts', appId, 'public', 'data', 'users', currentUser.username);
-                        await updateDoc(userRef, { lastBmi: currentUser.lastBmi, lastPlan: currentUser.lastPlan });
-                    } catch(e) { console.error(e); }
-                } else {
-                    let userIndex = usersDB.findIndex(u => u.username === currentUser.username);
-                    if (userIndex !== -1) usersDB[userIndex] = currentUser;
-                }
-            }
+            if (currentUser && currentUser.role !== 'admin') saveBmiToGoogleSheets();
         }
 
         // ------------------ ระบบสลับหน้า (ตาราง & แอดมิน) ------------------
@@ -1015,44 +882,35 @@
             if (!currentUser) {
                 document.getElementById('login-error').textContent = "กรุณาเข้าสู่ระบบหรือลงทะเบียน ก่อนดูตารางครับ";
                 document.getElementById('login-error').classList.remove('hidden');
-                openAuthModal();
-                return;
+                openAuthModal(); return;
             }
-
-            const mainContent = document.getElementById('main-content');
-            const planPage = document.getElementById('plan-page');
             generatePlanTable();
-            
-            mainContent.classList.remove('opacity-100');
-            mainContent.classList.add('opacity-0');
-            setTimeout(() => {
-                mainContent.classList.add('hidden');
-                window.scrollTo(0, 0);
-                planPage.classList.remove('hidden');
-                setTimeout(() => {
-                    planPage.classList.remove('opacity-0');
-                    planPage.classList.add('opacity-100');
-                }, 50);
-            }, 500);
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('plan-page').classList.remove('hidden');
+            setTimeout(() => document.getElementById('plan-page').classList.add('opacity-100'), 50);
         }
 
         function backToMain() {
-            const mainContent = document.getElementById('main-content');
-            const planPage = document.getElementById('plan-page');
-            if(planPage.classList.contains('hidden')) return;
-            
-            planPage.classList.remove('opacity-100');
-            planPage.classList.add('opacity-0');
-            setTimeout(() => {
-                planPage.classList.add('hidden');
-                mainContent.classList.remove('hidden');
-                setTimeout(() => {
-                    mainContent.classList.remove('opacity-0');
-                    mainContent.classList.add('opacity-100');
-                }, 50);
-            }, 500);
+            document.getElementById('plan-page').classList.add('hidden');
+            document.getElementById('plan-page').classList.remove('opacity-100');
+            document.getElementById('main-content').classList.remove('hidden');
         }
 
+        async function showAdminPage() {
+            await renderAdminTable(); 
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('plan-page').classList.add('hidden');
+            document.getElementById('admin-page').classList.remove('hidden');
+            setTimeout(() => document.getElementById('admin-page').classList.add('opacity-100'), 50);
+        }
+
+        function backToMainFromAdmin() {
+            document.getElementById('admin-page').classList.add('hidden');
+            document.getElementById('admin-page').classList.remove('opacity-100');
+            document.getElementById('main-content').classList.remove('hidden');
+        }
+
+// ------------------ ข้อมูลตารางออกกำลังกายและคลาส ------------------
         const healthPlans = {
             underweight: {
                 title: "💪 ตารางเพิ่มน้ำหนัก & สร้างกล้ามเนื้อ",
@@ -1108,6 +966,33 @@
             }
         };
 
+        const classDetailsData = {
+            weight: {
+                title: "Weight Training", thaiTitle: "เวทเทรนนิ่ง สร้างกล้ามเนื้อ", image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000&auto=format&fit=crop",
+                tag: "เสริมกล้ามเนื้อ", time: "60 นาที", calories: "400 kcal", trainer: "เทรนกับโค้ชเชี่ยวชาญด้านนี้",
+                description: "คลาสเวทเทรนนิ่งออกแบบมาเพื่อสร้างกล้ามเนื้อ เพิ่มความแข็งแรงของร่างกาย และช่วยปรับระบบเผาผลาญให้ทำงานได้ดีขึ้นแม้ในขณะพัก โดยจะมีการใช้อุปกรณ์ต่างๆ เช่น ดัมเบล บาร์เบล และเครื่องแมชชีน ภายใต้การดูแลอย่างใกล้ชิด",
+                benefits: ["เพิ่มมวลกล้ามเนื้อและสร้างความกระชับให้สัดส่วน", "มวลกระดูกแข็งแรงขึ้น ลดความเสี่ยงโรคกระดูกพรุน", "เผาผลาญไขมันได้ต่อเนื่องยาวนาน (Afterburn effect)", "ปรับบุคลิกภาพให้ดีขึ้น"],
+                workouts: ["Barbell Squat (สควอทบาร์เบล) - บริหารกล้ามเนื้อขาและสะโพกให้แข็งแรง", "Bench Press (เบนช์เพรส) - สร้างความแข็งแกร่งให้กล้ามเนื้อหน้าอก", "Deadlift (เดดลิฟต์) - บริหารกล้ามเนื้อหลัง แกนกลางลำตัว และสะโพก"],
+                nutrition: "เน้นทานโปรตีนให้เพียงพอ (1.6-2 กรัมต่อน้ำหนักตัว 1 กก.) เช่น อกไก่ ปลา ไข่ หรือเวย์โปรตีน เพื่อช่วยซ่อมแซมและสร้างกล้ามเนื้อใหม่ และควรทานคาร์โบไฮเดรตเชิงซ้อนก่อนเล่นเพื่อเป็นพลังงาน"
+            },
+            yoga: {
+                title: "Vinyasa Yoga", thaiTitle: "วินยาสะ โยคะ", image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1000&auto=format&fit=crop",
+                tag: "ยืดหยุ่น & ผ่อนคลาย", time: "45 นาที", calories: "250 kcal", trainer: "เทรนกับโค้ชเชี่ยวชาญด้านนี้",
+                description: "คลาสโยคะแบบต่อเนื่องที่เน้นการเคลื่อนไหวประสานไปกับลมหายใจ (Flow) ช่วยให้จิตใจสงบ ลดความเครียด พร้อมๆ กับการยืดเหยียดและสร้างความแข็งแรงให้กับกล้ามเนื้อแกนกลางลำตัว เหมาะสำหรับผู้เริ่มต้นไปจนถึงระดับกลาง",
+                benefits: ["เพิ่มความยืดหยุ่น ลดอาการออฟฟิศซินโดรม", "ฝึกสมาธิ ผ่อนคลายความเครียดจากชีวิตประจำวัน", "กระตุ้นระบบไหลเวียนโลหิตและระบบขับถ่าย", "พัฒนาการทรงตัวและบุคลิกภาพ"],
+                workouts: ["Downward-Facing Dog (ท่าสุนัขก้มหน้า) - ยืดเหยียดหลังและน่อง", "Warrior II (ท่านักรบ 2) - สร้างความแข็งแรงให้ช่วงล่างและความมั่นคง", "Tree Pose (ท่าต้นไม้) - ฝึกการทรงตัวและสมาธิ"],
+                nutrition: "เน้นอาหารย่อยง่ายก่อนเข้าคลาส เช่น กล้วย หรือโยเกิร์ต หลังคลาสควรดื่มน้ำให้เพียงพอและทานอาหารที่อุดมด้วยสารต้านอนุมูลอิสระ เช่น ผลไม้ตระกูลเบอร์รี่"
+            },
+            hiit: {
+                title: "HIIT Cardio", thaiTitle: "คาร์ดิโอความเข้มข้นสูง", image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop",
+                tag: "เผาผลาญไขมัน", time: "30 นาที", calories: "500 kcal", trainer: "เทรนกับโค้ชเชี่ยวชาญด้านนี้",
+                description: "High-Intensity Interval Training (HIIT) คือการออกกำลังกายที่ใช้เวลาสั้นแต่ได้ผลลัพธ์สูง โดยสลับระหว่างการออกกำลังกายอย่างหนักหน่วงและการพักช่วงสั้นๆ เป็นคลาสที่เร้าใจ สนุก และเรียกเหงื่อได้ดีที่สุดในฟิตเนส",
+                benefits: ["เผาผลาญแคลอรี่และไขมันได้สูงสุดในเวลาอันสั้น", "เพิ่มความอึดของหัวใจและปอด (Cardiovascular endurance)", "ระบบเผาผลาญทำงานหนักขึ้นตลอด 24 ชั่วโมงหลังเล่น", "สร้างความคล่องตัวและความรวดเร็ว"],
+                workouts: ["Burpees (เบอร์พี) - ท่าบริหารทั่วตัวที่เรียกเหงื่อและเผาผลาญได้ดีมาก", "Mountain Climbers (ท่าปีนเขา) - บริหารแกนกลางลำตัวและกระตุ้นการเต้นของหัวใจ", "Jumping Jacks (กระโดดตบ) - คาร์ดิโอพื้นฐานที่ช่วยอุ่นเครื่องและเร่งการเผาผลาญ"],
+                nutrition: "เน้นคาร์โบไฮเดรตเชิงซ้อนก่อนออกกำลัง 1-2 ชม. (เช่น ข้าวโอ๊ต ขนมปังโฮลวีท) เพื่อให้มีแรงกระโดด และทานโปรตีนหลังออกกำลังกายเพื่อป้องกันการสูญเสียกล้ามเนื้อ"
+            }
+        };
+
         function generatePlanTable() {
             const plan = healthPlans[currentPlanKey];
             document.getElementById('plan-title').textContent = plan.title;
@@ -1138,34 +1023,6 @@
                 tbody.appendChild(tr);
             });
         }
-
-        // ------------------ ระบบจองคลาสและ Modal ------------------
-        const classDetailsData = {
-            weight: {
-                title: "Weight Training", thaiTitle: "เวทเทรนนิ่ง สร้างกล้ามเนื้อ", image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000&auto=format&fit=crop",
-                tag: "เสริมกล้ามเนื้อ", time: "60 นาที", calories: "400 kcal", trainer: "เทรนกับโค้ชเชี่ยวชาญด้านนี้",
-                description: "คลาสเวทเทรนนิ่งออกแบบมาเพื่อสร้างกล้ามเนื้อ เพิ่มความแข็งแรงของร่างกาย และช่วยปรับระบบเผาผลาญให้ทำงานได้ดีขึ้นแม้ในขณะพัก โดยจะมีการใช้อุปกรณ์ต่างๆ เช่น ดัมเบล บาร์เบล และเครื่องแมชชีน ภายใต้การดูแลอย่างใกล้ชิด",
-                benefits: ["เพิ่มมวลกล้ามเนื้อและสร้างความกระชับให้สัดส่วน", "มวลกระดูกแข็งแรงขึ้น ลดความเสี่ยงโรคกระดูกพรุน", "เผาผลาญไขมันได้ต่อเนื่องยาวนาน (Afterburn effect)", "ปรับบุคลิกภาพให้ดีขึ้น"],
-                workouts: ["Barbell Squat (สควอทบาร์เบล) - บริหารกล้ามเนื้อขาและสะโพกให้แข็งแรง", "Bench Press (เบนช์เพรส) - สร้างความแข็งแกร่งให้กล้ามเนื้อหน้าอก", "Deadlift (เดดลิฟต์) - บริหารกล้ามเนื้อหลัง แกนกลางลำตัว และสะโพก"],
-                nutrition: "เน้นทานโปรตีนให้เพียงพอ (1.6-2 กรัมต่อน้ำหนักตัว 1 กก.) เช่น อกไก่ ปลา ไข่ หรือเวย์โปรตีน เพื่อช่วยซ่อมแซมและสร้างกล้ามเนื้อใหม่ และควรทานคาร์โบไฮเดรตเชิงซ้อนก่อนเล่นเพื่อเป็นพลังงาน"
-            },
-            yoga: {
-                title: "Vinyasa Yoga", thaiTitle: "วินยาสะ โยคะ", image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1000&auto=format&fit=crop",
-                tag: "ยืดหยุ่น & ผ่อนคลาย", time: "45 นาที", calories: "250 kcal", trainer: "เทรนกับโค้ชเชี่ยวชาญด้านนี้",
-                description: "คลาสโยคะแบบต่อเนื่องที่เน้นการเคลื่อนไหวประสานไปกับลมหายใจ (Flow) ช่วยให้จิตใจสงบ ลดความเครียด พร้อมๆ กับการยืดเหยียดและสร้างความแข็งแรงให้กับกล้ามเนื้อแกนกลางลำตัว เหมาะสำหรับผู้เริ่มต้นไปจนถึงระดับกลาง",
-                benefits: ["เพิ่มความยืดหยุ่น ลดอาการออฟฟิศซินโดรม", "ฝึกสมาธิ ผ่อนคลายความเครียดจากชีวิตประจำวัน", "กระตุ้นระบบไหลเวียนโลหิตและระบบขับถ่าย", "พัฒนาการทรงตัวและบุคลิกภาพ"],
-                workouts: ["Downward-Facing Dog (ท่าสุนัขก้มหน้า) - ยืดเหยียดหลังและน่อง", "Warrior II (ท่านักรบ 2) - สร้างความแข็งแรงให้ช่วงล่างและความมั่นคง", "Tree Pose (ท่าต้นไม้) - ฝึกการทรงตัวและสมาธิ"],
-                nutrition: "เน้นอาหารย่อยง่ายก่อนเข้าคลาส เช่น กล้วย หรือโยเกิร์ต หลังคลาสควรดื่มน้ำให้เพียงพอและทานอาหารที่อุดมด้วยสารต้านอนุมูลอิสระ เช่น ผลไม้ตระกูลเบอร์รี่"
-            },
-            hiit: {
-                title: "HIIT Cardio", thaiTitle: "คาร์ดิโอความเข้มข้นสูง", image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop",
-                tag: "เผาผลาญไขมัน", time: "30 นาที", calories: "500 kcal", trainer: "เทรนกับโค้ชเชี่ยวชาญด้านนี้",
-                description: "High-Intensity Interval Training (HIIT) คือการออกกำลังกายที่ใช้เวลาสั้นแต่ได้ผลลัพธ์สูง โดยสลับระหว่างการออกกำลังกายอย่างหนักหน่วงและการพักช่วงสั้นๆ เป็นคลาสที่เร้าใจ สนุก และเรียกเหงื่อได้ดีที่สุดในฟิตเนส",
-                benefits: ["เผาผลาญแคลอรี่และไขมันได้สูงสุดในเวลาอันสั้น", "เพิ่มความอึดของหัวใจและปอด (Cardiovascular endurance)", "ระบบเผาผลาญทำงานหนักขึ้นตลอด 24 ชั่วโมงหลังเล่น", "สร้างความคล่องตัวและความรวดเร็ว"],
-                workouts: ["Burpees (เบอร์พี) - ท่าบริหารทั่วตัวที่เรียกเหงื่อและเผาผลาญได้ดีมาก", "Mountain Climbers (ท่าปีนเขา) - บริหารแกนกลางลำตัวและกระตุ้นการเต้นของหัวใจ", "Jumping Jacks (กระโดดตบ) - คาร์ดิโอพื้นฐานที่ช่วยอุ่นเครื่องและเร่งการเผาผลาญ"],
-                nutrition: "เน้นคาร์โบไฮเดรตเชิงซ้อนก่อนออกกำลัง 1-2 ชม. (เช่น ข้าวโอ๊ต ขนมปังโฮลวีท) เพื่อให้มีแรงกระโดด และทานโปรตีนหลังออกกำลังกายเพื่อป้องกันการสูญเสียกล้ามเนื้อ"
-            }
-        };
 
         function openClassModal(classId) {
             const data = classDetailsData[classId];
@@ -1242,98 +1099,34 @@
             setTimeout(() => closeClassModal(), 1500);
         }
 
-        // ------------------ ระบบแอดมิน (Admin Dashboard) ------------------
-        async function showAdminPage() {
-            const mainContent = document.getElementById('main-content');
-            const planPage = document.getElementById('plan-page');
-            const adminPage = document.getElementById('admin-page');
-            
-            await renderAdminTable(); 
-            
-            mainContent.classList.remove('opacity-100');
-            mainContent.classList.add('opacity-0');
-            planPage.classList.remove('opacity-100');
-            planPage.classList.add('opacity-0');
-            setTimeout(() => {
-                mainContent.classList.add('hidden');
-                planPage.classList.add('hidden');
-                window.scrollTo(0, 0);
-                adminPage.classList.remove('hidden');
-                setTimeout(() => {
-                    adminPage.classList.remove('opacity-0');
-                    adminPage.classList.add('opacity-100');
-                }, 50);
-            }, 500);
-        }
-
-        function backToMainFromAdmin() {
-            const mainContent = document.getElementById('main-content');
-            const adminPage = document.getElementById('admin-page');
-            if(adminPage.classList.contains('hidden')) return;
-            adminPage.classList.remove('opacity-100');
-            adminPage.classList.add('opacity-0');
-            setTimeout(() => {
-                adminPage.classList.add('hidden');
-                mainContent.classList.remove('hidden');
-                setTimeout(() => {
-                    mainContent.classList.remove('opacity-0');
-                    mainContent.classList.add('opacity-100');
-                }, 50);
-            }, 500);
-        }
-
+        // ------------------ ระบบแอดมินและการจัดการผู้ใช้ ------------------
         async function renderAdminTable() {
             const tbody = document.getElementById('admin-table-body');
-            tbody.innerHTML = '<tr><td colspan="7" class="p-8 text-center text-slate-500"><i class="ph ph-spinner animate-spin inline-block text-xl"></i> กำลังโหลดข้อมูล...</td></tr>';
-            
-            globalUserList = [];
-
-            try {
-                if (isFirebaseActive) {
-                    const usersCol = collection(db, 'artifacts', appId, 'public', 'data', 'users');
-                    const usersSnap = await getDocs(usersCol);
-                    usersSnap.forEach(doc => {
-                        if (doc.data().role !== 'admin') globalUserList.push(doc.data());
-                    });
-                } else {
-                    globalUserList = usersDB.filter(u => u.role !== 'admin');
-                }
-            } catch (e) {
-                console.error(e);
-                tbody.innerHTML = '<tr><td colspan="7" class="p-8 text-center text-red-500">เกิดข้อผิดพลาดในการโหลดข้อมูล</td></tr>';
-                return;
-            }
-            
+            tbody.innerHTML = '<tr><td colspan="7" class="p-8 text-center text-slate-500"><i class="ph ph-spinner animate-spin inline-block text-xl"></i> กำลังโหลดข้อมูลจาก Google Sheets...</td></tr>';
+            await initDB(); // โหลดใหม่
+            globalUserList = usersDB.filter(u => u.role !== 'admin');
             document.getElementById('admin-user-count').textContent = `ผู้ใช้ ${globalUserList.length} คน`;
-            document.getElementById('admin-search').value = "";
-            document.getElementById('admin-filter-gender').value = "all";
-            
             displayAdminUsers(globalUserList);
         }
 
         function displayAdminUsers(userList) {
             const tbody = document.getElementById('admin-table-body');
             tbody.innerHTML = '';
-            
             if (userList.length === 0) {
                 tbody.innerHTML = `<tr><td colspan="7" class="p-8 text-center text-slate-500">ไม่พบข้อมูลผู้ใช้งาน</td></tr>`;
                 return;
             }
-            
             userList.forEach(u => {
                 const tr = document.createElement('tr');
-                tr.className = "hover:bg-slate-50 transition-colors";
                 tr.innerHTML = `
-                    <td class="p-4 border-b border-slate-100 font-medium text-slate-800"><i class="ph-fill ph-user-circle text-slate-400 mr-2 text-lg align-middle"></i> ${u.name || '-'}</td>
-                    <td class="p-4 border-b border-slate-100 text-slate-600">${u.gender || '-'}</td>
-                    <td class="p-4 border-b border-slate-100 text-slate-600">@${u.username}</td>
-                    <td class="p-4 border-b border-slate-100"><span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">User</span></td>
-                    <td class="p-4 border-b border-slate-100 font-medium text-slate-800">${u.lastBmi || '-'}</td>
-                    <td class="p-4 border-b border-slate-100 text-sm text-slate-600">${u.lastPlan || '-'}</td>
+                    <td class="p-4 border-b border-slate-100">${u.name || '-'}</td>
+                    <td class="p-4 border-b border-slate-100">${u.gender || '-'}</td>
+                    <td class="p-4 border-b border-slate-100">@${u.username}</td>
+                    <td class="p-4 border-b border-slate-100">User</td>
+                    <td class="p-4 border-b border-slate-100">${u.lastBmi || '-'}</td>
+                    <td class="p-4 border-b border-slate-100">${u.lastPlan || '-'}</td>
                     <td class="p-4 border-b border-slate-100 text-center">
-                        <button onclick="deleteUser('${u.username}')" class="text-red-500 hover:text-red-700 hover:bg-red-50 p-2 rounded-lg transition-colors" title="ลบผู้ใช้นี้">
-                            <i class="ph-bold ph-trash text-lg"></i>
-                        </button>
+                        <button onclick="deleteUser('${u.username}')" class="text-red-500 hover:text-red-700 p-2"><i class="ph-bold ph-trash text-lg"></i></button>
                     </td>
                 `;
                 tbody.appendChild(tr);
@@ -1343,186 +1136,63 @@
         function filterAdminTable() {
             const keyword = document.getElementById('admin-search').value.toLowerCase();
             const genderFilter = document.getElementById('admin-filter-gender').value;
-
             const filteredUsers = globalUserList.filter(u => {
-                const safeName = (u.name || "").toLowerCase();
-                const safeUser = (u.username || "").toLowerCase();
-                const safeGender = u.gender || "";
-
-                const matchKeyword = safeName.includes(keyword) || safeUser.includes(keyword);
-                const matchGender = (genderFilter === 'all') || (safeGender === genderFilter);
-                
+                const matchKeyword = (u.name || "").toLowerCase().includes(keyword) || (u.username || "").toLowerCase().includes(keyword);
+                const matchGender = (genderFilter === 'all') || (u.gender === genderFilter);
                 return matchKeyword && matchGender;
             });
-
             displayAdminUsers(filteredUsers);
         }
 
         let confirmActionCallback = null;
         function deleteUser(username) {
             document.getElementById('confirm-modal-text').textContent = `คุณแน่ใจหรือไม่ว่าต้องการลบผู้ใช้ @${username} ?`;
-            
             confirmActionCallback = async () => {
-                try {
-                    if (isFirebaseActive) {
-                        const userRef = doc(db, 'artifacts', appId, 'public', 'data', 'users', username);
-                        await deleteDoc(userRef);
-                    } else {
-                        usersDB = usersDB.filter(u => u.username !== username);
-                    }
-                    await renderAdminTable(); // โหลดใหม่
-                } catch(e) {
-                    console.error("Delete Error:", e);
+                if (!SCRIPT_URL.includes('วาง_URL')) {
+                    await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify({ action: 'delete', username: username }) });
                 }
+                await renderAdminTable(); 
             };
-            
-            const modal = document.getElementById('confirm-modal');
-            const modalContent = document.getElementById('confirm-modal-content');
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modalContent.classList.remove('scale-95', 'opacity-0');
-                modalContent.classList.add('scale-100', 'opacity-100');
-            }, 10);
+            document.getElementById('confirm-modal').classList.remove('hidden');
+            setTimeout(() => document.getElementById('confirm-modal-content').classList.add('scale-100', 'opacity-100'), 10);
         }
 
         function hideCustomConfirm() {
-            const modal = document.getElementById('confirm-modal');
-            const modalContent = document.getElementById('confirm-modal-content');
-            modalContent.classList.remove('scale-100', 'opacity-100');
-            modalContent.classList.add('scale-95', 'opacity-0');
-            setTimeout(() => modal.classList.add('hidden'), 300);
+            document.getElementById('confirm-modal-content').classList.remove('scale-100', 'opacity-100');
+            setTimeout(() => document.getElementById('confirm-modal').classList.add('hidden'), 300);
         }
-        
-        // ผูกปุ่ม OK ของ Confirm Modal เข้ากับฟังก์ชัน Callback
-        document.getElementById('confirm-ok-btn').addEventListener('click', () => {
-            hideCustomConfirm();
-            if(confirmActionCallback) confirmActionCallback();
-        });
-
+        document.getElementById('confirm-ok-btn').addEventListener('click', () => { hideCustomConfirm(); if(confirmActionCallback) confirmActionCallback(); });
 
         // ------------------ ระบบเพิ่มแอดมิน ------------------
-        function openAddAdminModal() {
-            // ล้างค่าและซ่อนข้อความแจ้งเตือนต่างๆ ทุกครั้งที่เปิด
-            document.getElementById('add-admin-error').classList.add('hidden');
-            document.getElementById('add-admin-success').classList.add('hidden');
-            document.getElementById('add-admin-name').value = '';
-            document.getElementById('add-admin-username').value = '';
-            document.getElementById('add-admin-password').value = '';
-            
-            const modal = document.getElementById('add-admin-modal');
-            const modalContent = document.getElementById('add-admin-modal-content');
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-            setTimeout(() => {
-                modalContent.classList.remove('scale-95', 'opacity-0');
-                modalContent.classList.add('scale-100', 'opacity-100');
-            }, 10);
-        }
-
-        function closeAddAdminModal() {
-            const modal = document.getElementById('add-admin-modal');
-            const modalContent = document.getElementById('add-admin-modal-content');
-            modalContent.classList.remove('scale-100', 'opacity-100');
-            modalContent.classList.add('scale-95', 'opacity-0');
-            document.body.style.overflow = '';
-            setTimeout(() => modal.classList.add('hidden'), 300);
-        }
+        function openAddAdminModal() { document.getElementById('add-admin-modal').classList.remove('hidden'); setTimeout(() => document.getElementById('add-admin-modal-content').classList.add('scale-100', 'opacity-100'), 10); }
+        function closeAddAdminModal() { document.getElementById('add-admin-modal-content').classList.remove('scale-100', 'opacity-100'); setTimeout(() => document.getElementById('add-admin-modal').classList.add('hidden'), 300); }
 
         async function handleAddAdmin() {
-            const nameVal = document.getElementById('add-admin-name').value.trim();
-            const userVal = document.getElementById('add-admin-username').value.trim();
-            const passVal = document.getElementById('add-admin-password').value.trim();
-            const err = document.getElementById('add-admin-error');
-            const succ = document.getElementById('add-admin-success');
+            const nameVal = document.getElementById('add-admin-name').value;
+            const userVal = document.getElementById('add-admin-username').value;
+            const passVal = document.getElementById('add-admin-password').value;
             const btnText = document.getElementById('add-admin-btn-text');
             
-            err.classList.add('hidden');
-            succ.classList.add('hidden');
-            
-            if (!nameVal || !userVal || !passVal) {
-                err.textContent = "กรุณากรอกข้อมูลให้ครบถ้วน";
-                err.classList.remove('hidden');
-                return;
-            }
-            
             btnText.textContent = "กำลังบันทึก...";
+            const newAdmin = { action: 'addAdmin', name: nameVal, gender: "-", username: userVal, password: passVal, role: "admin", lastBmi: "-", lastPlan: "-" };
             
-            const newAdmin = { 
-                name: nameVal, 
-                gender: "-", 
-                username: userVal, 
-                password: passVal, 
-                role: "admin", 
-                lastBmi: "-", 
-                lastPlan: "-" 
-            };
-
-            try {
-                if (isFirebaseActive) {
-                    const userRef = doc(db, 'artifacts', appId, 'public', 'data', 'users', userVal);
-                    const userSnap = await getDoc(userRef);
-                    if (userSnap.exists()) {
-                        err.textContent = "ชื่อผู้ใช้นี้มีคนใช้แล้ว กรุณาใช้ชื่ออื่น";
-                        err.classList.remove('hidden');
-                        btnText.textContent = "สร้างบัญชีแอดมิน";
-                        return;
-                    }
-                    await setDoc(userRef, newAdmin);
-                } else {
-                    if (usersDB.find(u => u.username === userVal)) {
-                        err.textContent = "ชื่อผู้ใช้นี้มีคนใช้แล้ว กรุณาใช้ชื่ออื่น";
-                        err.classList.remove('hidden');
-                        btnText.textContent = "สร้างบัญชีแอดมิน";
-                        return;
-                    }
-                    usersDB.push(newAdmin);
-                }
-                
-                succ.textContent = "สร้างบัญชีแอดมินสำเร็จ!";
-                succ.classList.remove('hidden');
-                
-                // หลังจากขึ้นสำเร็จ 1.5 วินาที ให้ปิดหน้าต่างอัตโนมัติ
-                setTimeout(() => {
-                    closeAddAdminModal();
-                }, 1500);
-                
-            } catch(e) {
-                err.textContent = "เกิดข้อผิดพลาดในการบันทึกข้อมูล";
-                err.classList.remove('hidden');
+            if (!SCRIPT_URL.includes('วาง_URL')) {
+                await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(newAdmin) });
             }
+            
+            document.getElementById('add-admin-success').textContent = "สร้างบัญชีแอดมินสำเร็จ!";
+            document.getElementById('add-admin-success').classList.remove('hidden');
+            setTimeout(() => closeAddAdminModal(), 1500);
             btnText.textContent = "สร้างบัญชีแอดมิน";
         }
 
-
         function exportToCSV() {
-            if(globalUserList.length === 0) {
-                alert("ยังไม่มีข้อมูลผู้ใช้งานสำหรับทำรายงาน");
-                return;
-            }
-            let csvContent = "\uFEFF"; 
-            csvContent += "ชื่อ-นามสกุล,เพศ,ชื่อผู้ใช้ (Username),สถานะ,BMI ล่าสุด,เป้าหมายที่แนะนำ\n";
-
-            globalUserList.forEach(u => {
-                const name = `"${(u.name || "").replace(/"/g, '""')}"`;
-                const gender = `"${u.gender || "-"}"`;
-                const username = `"${(u.username || "").replace(/"/g, '""')}"`;
-                const role = `"ผู้ใช้งานทั่วไป"`;
-                const bmi = `"${u.lastBmi || "-"}"`;
-                const plan = `"${u.lastPlan || "-"}"`;
-                
-                csvContent += `${name},${gender},${username},${role},${bmi},${plan}\n`;
-            });
-
+            // ฟังก์ชัน export CSV (ใช้ของเดิมได้เลย)
+            let csvContent = "\uFEFFชื่อ-นามสกุล,เพศ,ชื่อผู้ใช้,สถานะ,BMI ล่าสุด,เป้าหมายที่แนะนำ\n";
+            globalUserList.forEach(u => csvContent += `"${u.name}","${u.gender}","${u.username}","ผู้ใช้งานทั่วไป","${u.lastBmi}","${u.lastPlan}"\n`);
             const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement("a");
-            const url = URL.createObjectURL(blob);
-            link.setAttribute("href", url);
-            link.setAttribute("download", "FitLife_Users_Report.csv");
-            link.style.visibility = 'hidden';
-            
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+            const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "FitLife_Users.csv";
+            document.body.appendChild(link); link.click(); document.body.removeChild(link);
         }
     </script>
 </body>
