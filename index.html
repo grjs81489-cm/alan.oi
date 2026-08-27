@@ -45,23 +45,23 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <!-- โลโก้ -->
-                <a href="#" onClick="backToMain()" class="flex items-center gap-2 text-white font-bold text-2xl tracking-wide">
+                <a href="#" onclick="backToMain()" class="flex items-center gap-2 text-white font-bold text-2xl tracking-wide">
                     <i class="ph-fill ph-barbell text-primary text-3xl"></i>
                     FitLife
                 </a>
 
                 <!-- เมนูเดสก์ท็อป -->
                 <div class="hidden md:flex space-x-8 text-white font-medium" id="nav-links">
-                    <a href="#home" onClick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">หน้าแรก</a>
-                    <a href="#features" onClick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">บริการ</a>
-                    <a href="#classes" onClick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">คลาสเรียน</a>
-                    <a href="#bmi" onClick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">คำนวณ BMI & แคลอรี่</a>
+                    <a href="#home" onclick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">หน้าแรก</a>
+                    <a href="#features" onclick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">บริการ</a>
+                    <a href="#classes" onclick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">คลาสเรียน</a>
+                    <a href="#bmi" onclick="backToMain()" class="hover:text-primary transition-colors cursor-pointer">คำนวณ BMI & แคลอรี่</a>
                 </div>
 
                 <!-- พื้นที่เข้าสู่ระบบ (Desktop) -->
                 <div class="hidden md:flex items-center gap-4" id="nav-auth-desktop">
-                    <button onClick="openAuthModal()" class="text-white hover:text-primary font-medium transition-colors">เข้าสู่ระบบ</button>
-                    <a href="#classes" onClick="backToMain()" class="bg-primary hover:bg-primaryDark text-white px-6 py-2 rounded-full font-medium transition-colors shadow-lg shadow-primary/30">
+                    <button onclick="openAuthModal()" class="text-white hover:text-primary font-medium transition-colors">เข้าสู่ระบบ</button>
+                    <a href="#classes" onclick="backToMain()" class="bg-primary hover:bg-primaryDark text-white px-6 py-2 rounded-full font-medium transition-colors shadow-lg shadow-primary/30">
                         เริ่มกันเลย
                     </a>
                 </div>
@@ -76,12 +76,12 @@
         <!-- เมนูมือถือ -->
         <div id="mobile-menu" class="hidden md:hidden bg-slate-900 absolute top-full left-0 w-full shadow-xl">
             <div class="flex flex-col px-4 pt-2 pb-6 space-y-3 text-white">
-                <a href="#home" onClick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">หน้าแรก</a>
-                <a href="#features" onClick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">บริการ</a>
-                <a href="#classes" onClick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คลาสเรียน</a>
-                <a href="#bmi" onClick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คำนวณ BMI & แคลอรี่</a>
+                <a href="#home" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">หน้าแรก</a>
+                <a href="#features" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">บริการ</a>
+                <a href="#classes" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คลาสเรียน</a>
+                <a href="#bmi" onclick="backToMain()" class="mobile-link block px-3 py-2 rounded-md hover:bg-slate-800">คำนวณ BMI & แคลอรี่</a>
                 <div class="border-t border-slate-700 my-2 pt-2" id="nav-auth-mobile">
-                    <button onClick="openAuthModal()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-primary font-bold hover:bg-slate-800">เข้าสู่ระบบ / ลงทะเบียน</button>
+                    <button onclick="openAuthModal()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-primary font-bold hover:bg-slate-800">เข้าสู่ระบบ / ลงทะเบียน</button>
                 </div>
             </div>
         </div>
@@ -160,7 +160,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- คลาส 1 -->
-                    <div onClick="openClassModal('weight')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
+                    <div onclick="openClassModal('weight')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
                         <div class="h-64 overflow-hidden relative">
                             <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000&auto=format&fit=crop" alt="เวทเทรนนิ่ง" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
@@ -182,7 +182,7 @@
                     </div>
 
                     <!-- คลาส 2 -->
-                    <div onClick="openClassModal('yoga')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
+                    <div onclick="openClassModal('yoga')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
                         <div class="h-64 overflow-hidden relative">
                             <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1000&auto=format&fit=crop" alt="โยคะ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
@@ -204,7 +204,7 @@
                     </div>
 
                     <!-- คลาส 3 -->
-                    <div onClick="openClassModal('hiit')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
+                    <div onclick="openClassModal('hiit')" class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group cursor-pointer transform hover:-translate-y-2">
                         <div class="h-64 overflow-hidden relative">
                             <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1000&auto=format&fit=crop" alt="คาร์ดิโอ" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                             <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
@@ -292,7 +292,7 @@
                                 
                                 <p id="calc-error" class="text-red-400 text-sm hidden bg-red-900/30 p-3 rounded-lg border border-red-800/50 text-center"></p>
 
-                                <button onClick="calculateStats()" class="w-full bg-primary hover:bg-primaryDark text-white py-4 rounded-xl font-bold text-lg transition-colors shadow-lg shadow-primary/20 mt-2">
+                                <button onclick="calculateStats()" class="w-full bg-primary hover:bg-primaryDark text-white py-4 rounded-xl font-bold text-lg transition-colors shadow-lg shadow-primary/20 mt-2">
                                     คำนวณผลลัพธ์
                                 </button>
                             </div>
@@ -312,7 +312,7 @@
                                 </div>
                                 
                                 <!-- ปุ่มดูตาราง -->
-                                <button onClick="showPlanPage()" id="view-plan-btn" class="mt-6 w-full bg-gradient-to-r from-orange-400 to-yellow-500 hover:from-orange-500 hover:to-yellow-600 text-white py-3 rounded-xl font-bold transition-all transform hover:scale-[1.02] shadow-lg shadow-orange-500/30 flex justify-center items-center gap-2">
+                                <button onclick="showPlanPage()" id="view-plan-btn" class="mt-6 w-full bg-gradient-to-r from-orange-400 to-yellow-500 hover:from-orange-500 hover:to-yellow-600 text-white py-3 rounded-xl font-bold transition-all transform hover:scale-[1.02] shadow-lg shadow-orange-500/30 flex justify-center items-center gap-2">
                                     <i class="ph-bold ph-calendar-check text-xl"></i> ดูตารางแนะนำ 1 สัปดาห์
                                 </button>
                             </div>
@@ -347,12 +347,11 @@
 
     </div> <!-- ปิด div id="main-content" ของหน้าแรก -->
 
-
     <!-- ================= หน้าตารางออกกำลังกาย (หน้าใหม่แบบเสมือน) ================= -->
     <div id="plan-page" class="hidden min-h-screen pt-24 pb-12 bg-slate-50 transition-opacity duration-500 opacity-0">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
-                <button onClick="backToMain()" class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2 self-start sm:self-auto">
+                <button onclick="backToMain()" class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2 self-start sm:self-auto">
                     <i class="ph-bold ph-arrow-left"></i> ย้อนกลับไปหน้าหลัก
                 </button>
                 <div class="text-right hidden sm:block">
@@ -390,10 +389,10 @@
                 </div>
                 
                 <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-                    <button onClick="window.print()" class="bg-white border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-full font-bold transition-colors shadow-sm inline-flex items-center justify-center gap-2">
+                    <button onclick="window.print()" class="bg-white border-2 border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-3 rounded-full font-bold transition-colors shadow-sm inline-flex items-center justify-center gap-2">
                         <i class="ph-bold ph-printer text-xl"></i> พิมพ์ตารางนี้
                     </button>
-                    <button onClick="backToMain()" class="bg-slate-900 text-white hover:bg-slate-800 px-8 py-3 rounded-full font-bold transition-colors shadow-lg inline-flex items-center justify-center gap-2">
+                    <button onclick="backToMain()" class="bg-slate-900 text-white hover:bg-slate-800 px-8 py-3 rounded-full font-bold transition-colors shadow-lg inline-flex items-center justify-center gap-2">
                         ดูคลาสที่น่าสนใจต่อ <i class="ph-bold ph-arrow-right text-xl"></i>
                     </button>
                 </div>
@@ -401,20 +400,19 @@
         </div>
     </div>
 
-
     <!-- ================= หน้าผู้ดูแลระบบ (Admin Dashboard) ================= -->
     <div id="admin-page" class="hidden min-h-screen pt-24 pb-12 bg-slate-50 transition-opacity duration-500 opacity-0">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col sm:flex-row justify-between items-center mb-8 gap-4">
                 <h2 class="text-3xl font-bold text-slate-900"><i class="ph-fill ph-shield-check text-primary"></i> ระบบจัดการสำหรับแอดมิน</h2>
                 <div class="flex flex-wrap gap-3">
-                    <button onClick="openAddAdminModal()" class="bg-blue-600 border border-blue-700 text-white hover:bg-blue-700 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
+                    <button onclick="openAddAdminModal()" class="bg-blue-600 border border-blue-700 text-white hover:bg-blue-700 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
                         <i class="ph-bold ph-user-plus"></i> เพิ่มแอดมิน
                     </button>
-                    <button onClick="exportToCSV()" class="bg-green-600 border border-green-700 text-white hover:bg-green-700 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
+                    <button onclick="exportToCSV()" class="bg-green-600 border border-green-700 text-white hover:bg-green-700 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
                         <i class="ph-bold ph-file-csv"></i> โหลดไฟล์รายงาน (Excel)
                     </button>
-                    <button onClick="backToMainFromAdmin()" class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
+                    <button onclick="backToMainFromAdmin()" class="bg-white border border-slate-200 text-slate-700 hover:bg-slate-100 px-5 py-2 rounded-full font-medium transition-colors shadow-sm flex items-center gap-2">
                         <i class="ph-bold ph-arrow-left"></i> กลับหน้าหลัก
                     </button>
                 </div>
@@ -422,20 +420,26 @@
             
             <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
                 <div class="p-6 border-b border-slate-200 bg-slate-50 flex flex-col md:flex-row justify-between items-center gap-4">
+                    
+                    <!-- ส่วนแท็บเมนู แยก Users / Admins -->
                     <div class="flex flex-col gap-2 w-full md:w-auto">
                         <div class="flex rounded-lg bg-slate-200/50 p-1 w-fit">
-                            <button onClick="switchAdminTab('users')" id="tab-manage-users" class="px-6 py-2 rounded-md font-bold text-sm bg-white shadow text-slate-900 transition-all flex items-center gap-2"><i class="ph-fill ph-users"></i> ผู้ใช้งานทั่วไป</button>
-                            <button onClick="switchAdminTab('admins')" id="tab-manage-admins" class="px-6 py-2 rounded-md font-bold text-sm text-slate-500 hover:text-slate-900 transition-all flex items-center gap-2"><i class="ph-fill ph-shield"></i> ผู้ดูแลระบบ</button>
+                            <button onclick="switchAdminTab('users')" id="tab-manage-users" class="px-6 py-2 rounded-md font-bold text-sm bg-white shadow text-slate-900 transition-all flex items-center gap-2">
+                                <i class="ph-fill ph-users"></i> ผู้ใช้งานทั่วไป
+                            </button>
+                            <button onclick="switchAdminTab('admins')" id="tab-manage-admins" class="px-6 py-2 rounded-md font-bold text-sm text-slate-500 hover:text-slate-900 transition-all flex items-center gap-2">
+                                <i class="ph-fill ph-shield"></i> ผู้ดูแลระบบ
+                            </button>
                         </div>
                         <div class="flex items-center gap-2 mt-2">
-                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold" id="admin-user-count">โหลดข้อมูล...</span>
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-semibold" id="admin-user-count">กำลังโหลดข้อมูล...</span>
                         </div>
                     </div>
                     
                     <!-- เครื่องมือค้นหาและกรอง (Search & Filter) -->
                     <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
                         <!-- ตัวกรองเพศ -->
-                        <select id="admin-filter-gender" onChange="filterAdminTable()" class="block w-full sm:w-32 px-3 py-2 border border-slate-300 rounded-xl leading-5 bg-white text-slate-700 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors shadow-sm">
+                        <select id="admin-filter-gender" onchange="filterAdminTable()" class="block w-full sm:w-32 px-3 py-2 border border-slate-300 rounded-xl leading-5 bg-white text-slate-700 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors shadow-sm">
                             <option value="all">ทุกเพศ</option>
                             <option value="ชาย">ชาย</option>
                             <option value="หญิง">หญิง</option>
@@ -447,7 +451,7 @@
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <i class="ph-bold ph-magnifying-glass text-slate-400"></i>
                             </div>
-                            <input type="text" id="admin-search" onKeyUp="filterAdminTable()" placeholder="ค้นหาชื่อ, Username..." class="block w-full pl-10 pr-3 py-2 border border-slate-300 rounded-xl leading-5 bg-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors shadow-sm">
+                            <input type="text" id="admin-search" onkeyup="filterAdminTable()" placeholder="ค้นหาชื่อ, Username..." class="block w-full pl-10 pr-3 py-2 border border-slate-300 rounded-xl leading-5 bg-white placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition-colors shadow-sm">
                         </div>
                     </div>
                 </div>
@@ -474,6 +478,84 @@
         </div>
     </div>
 
+    <!-- ================= Modal สำหรับดูรายละเอียดคลาส ================= -->
+    <div id="class-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 sm:p-6">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeClassModal()"></div>
+        <div class="bg-white rounded-3xl w-full max-w-3xl max-h-[90vh] overflow-y-auto relative z-10 shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="class-modal-content">
+            <button onclick="closeClassModal()" class="absolute top-4 right-4 w-10 h-10 bg-black/40 backdrop-blur rounded-full flex items-center justify-center text-white hover:bg-black/60 transition-colors z-20">
+                <i class="ph-bold ph-x text-lg"></i>
+            </button>
+            <div id="class-modal-body"></div>
+        </div>
+    </div>
+
+    <!-- ================= Modal สำหรับเข้าสู่ระบบ/ลงทะเบียน ================= -->
+    <div id="auth-modal" class="fixed inset-0 z-[110] hidden flex items-center justify-center p-4 sm:p-6">
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm transition-opacity" onclick="closeAuthModal()"></div>
+        <div class="bg-white rounded-3xl w-full max-w-md relative z-10 shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="auth-modal-content">
+            <button onclick="closeAuthModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-slate-200 transition-colors z-20">
+                <i class="ph-bold ph-x"></i>
+            </button>
+
+            
+            <div class="p-8">
+                <div class="flex justify-center mb-6">
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center text-primary text-4xl">
+                        <i class="ph-fill ph-user"></i>
+                    </div>
+                </div>
+                
+                <div class="flex rounded-lg bg-slate-100 p-1 mb-6">
+                    <button onclick="switchAuthTab('login')" id="tab-login" class="flex-1 py-2 rounded-md font-bold text-sm bg-white shadow text-slate-900 transition-all">เข้าสู่ระบบ</button>
+                    <button onclick="switchAuthTab('register')" id="tab-register" class="flex-1 py-2 rounded-md font-bold text-sm text-slate-500 hover:text-slate-900 transition-all">ลงทะเบียนใหม่</button>
+                </div>
+
+                <!-- ฟอร์มเข้าสู่ระบบ -->
+                <div id="form-login" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">ชื่อผู้ใช้ (Username)</label>
+                        <input type="text" id="login-username" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">รหัสผ่าน (Password)</label>
+                        <input type="password" id="login-password" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                    </div>
+                    <p id="login-error" class="text-red-500 text-sm hidden bg-red-50 border border-red-100 p-2 rounded-lg text-center"></p>
+                    <button onclick="handleLogin()" class="w-full bg-slate-900 hover:bg-slate-800 text-white py-3 rounded-xl font-bold transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
+                        <span id="login-btn-text">เข้าสู่ระบบ</span>
+                    </button>
+                </div>
+
+                <!-- ฟอร์มลงทะเบียน -->
+                <div id="form-register" class="space-y-4 hidden">
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">ชื่อ-นามสกุล (Name)</label>
+                        <input type="text" id="reg-name" placeholder="ชื่อ นามสกุล" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">เพศ (Gender)</label>
+                        <select id="reg-gender" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                            <option value="ชาย">ชาย</option>
+                            <option value="หญิง">หญิง</option>
+                            <option value="LGBTQ">LGBTQ</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">ชื่อผู้ใช้ (Username)</label>
+                        <input type="text" id="reg-username" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-slate-700 mb-1">รหัสผ่าน (Password)</label>
+                        <input type="password" id="reg-password" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors">
+                    </div>
+                    <p id="reg-error" class="text-red-500 text-sm hidden bg-red-50 border border-red-100 p-2 rounded-lg text-center"></p>
+                    <button onclick="handleRegister()" class="w-full bg-primary hover:bg-primaryDark text-white py-3 rounded-xl font-bold transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
+                        <span id="reg-btn-text">สร้างบัญชีผู้ใช้</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ================= Modal ยืนยันการลบ (Custom Confirm) ================= -->
     <div id="confirm-modal" class="fixed inset-0 z-[120] hidden flex items-center justify-center p-4 sm:p-6">
@@ -485,18 +567,17 @@
             <h3 class="text-xl font-bold text-slate-900 mb-2">ยืนยันการลบ</h3>
             <p class="text-slate-600 mb-6" id="confirm-modal-text">คุณแน่ใจหรือไม่?</p>
             <div class="flex gap-3 justify-center">
-                <button onClick="hideCustomConfirm()" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 py-3 rounded-xl font-bold transition-colors">ยกเลิก</button>
+                <button onclick="hideCustomConfirm()" class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-700 py-3 rounded-xl font-bold transition-colors">ยกเลิก</button>
                 <button id="confirm-ok-btn" class="flex-1 bg-red-500 hover:bg-red-600 text-white py-3 rounded-xl font-bold transition-colors shadow-lg shadow-red-500/30">ลบข้อมูล</button>
             </div>
         </div>
     </div>
 
-
     <!-- ================= Modal เพิ่มแอดมิน ================= -->
     <div id="add-admin-modal" class="fixed inset-0 z-[125] hidden flex items-center justify-center p-4 sm:p-6">
-        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onClick="closeAddAdminModal()"></div>
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onclick="closeAddAdminModal()"></div>
         <div class="bg-white rounded-3xl w-full max-w-md relative z-10 shadow-2xl transform scale-95 opacity-0 transition-all duration-300" id="add-admin-modal-content">
-            <button onClick="closeAddAdminModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-slate-200 transition-colors z-20">
+            <button onclick="closeAddAdminModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-slate-600 hover:bg-slate-200 transition-colors z-20">
                 <i class="ph-bold ph-x"></i>
             </button>
             
@@ -523,7 +604,7 @@
                     </div>
                     <p id="add-admin-error" class="text-red-500 text-sm hidden bg-red-50 border border-red-100 p-2 rounded-lg text-center"></p>
                     <p id="add-admin-success" class="text-green-600 text-sm hidden bg-green-50 border border-green-100 p-2 rounded-lg text-center"></p>
-                    <button onClick="handleAddAdmin()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
+                    <button onclick="handleAddAdmin()" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
                         <span id="add-admin-btn-text">สร้างบัญชีแอดมิน</span>
                     </button>
                 </div>
@@ -533,28 +614,52 @@
 
     <!-- ================= JavaScript (เชื่อมต่อ Google Sheets) ================= -->
     <script>
+        // นำ URL ของ Web App ที่ได้จาก Google Apps Script มาใส่ตรงนี้
         const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyONx87uQo4ks1T272DWGpSjjCxCQaDfwwTxiZk3SH-jEfQr2UIwgwaXSMbYHiMz4-t6Q/exec';
 
+        // ---- ตัวแปรระบบ ----
         let usersDB = []; 
         let currentUser = null; 
         let currentPlanKey = "normal";
         let currentBmiText = "";
         let globalUserList = [];
-        let currentAdminTab = 'users';
+        let currentAdminTab = 'users'; // เก็บสถานะแท็บหน้าแอดมิน
 
+        // โหลดข้อมูลผู้ใช้จาก Google Sheets ทันทีที่เปิดเว็บ
         async function initDB() {
             try {
                 if (SCRIPT_URL.includes('วาง_URL')) {
                     console.warn("ยังไม่ได้ใส่ SCRIPT_URL จะใช้ข้อมูลจำลองแทน");
+                    // สร้างข้อมูลจำลองให้ถ้ายังไม่มี URL ป้องกันเว็บค้าง
                     usersDB = [{ name: "ผู้ดูแลระบบ", gender: "-", username: "admin", password: "1234", role: "admin", lastBmi: "-", lastPlan: "-" }];
                     return;
                 }
+                
                 const response = await fetch(SCRIPT_URL);
-                const data = await response.json();
-                usersDB = data;
-                console.log("โหลดข้อมูลจาก Google Sheets สำเร็จ");
+                const textData = await response.text(); // อ่านเป็นข้อความก่อน ป้องกันเว็บค้างถ้าได้มาเป็น HTML
+                
+                try {
+                    // พยายามแปลงเป็น JSON
+                    const data = JSON.parse(textData);
+                    
+                    // ตรวจสอบว่าได้ข้อมูลมาเป็น Array หรือไม่
+                    if(Array.isArray(data)) {
+                        usersDB = data;
+                    } else {
+                        // ป้องกัน Error กรณี Sheet ส่งข้อมูลมาผิดรูปแบบ
+                        usersDB = [{ name: "ผู้ดูแลระบบ", gender: "-", username: "admin", password: "1234", role: "admin", lastBmi: "-", lastPlan: "-" }];
+                    }
+                } catch (jsonErr) {
+                    console.warn("API ไม่ได้ส่งข้อมูล JSON กลับมา (อาจเป็นหน้า HTML แจ้งเตือนจาก Google เนื่องจากตั้งค่าสิทธิ์ไม่ถูกต้อง หรือ URL หมดอายุ):");
+                    console.warn(textData.substring(0, 100) + '...');
+                    // สร้างแอดมินฉุกเฉินให้เข้าสู่ระบบได้
+                    usersDB = [{ name: "Admin ฉุกเฉิน (Local)", gender: "-", username: "admin", password: "1234", role: "admin", lastBmi: "-", lastPlan: "-" }];
+                }
+                
             } catch (e) {
-                console.error("โหลดข้อมูลล้มเหลว:", e);
+                console.error("เชื่อมต่อแหล่งข้อมูลล้มเหลว (อาจติดปัญหา CORS หรือ Network):", e.message);
+                // สร้างแอดมินฉุกเฉินให้เข้าสู่ระบบได้แม้เน็ตหลุด
+                usersDB = [{ name: "Admin ฉุกเฉิน (Offline)", gender: "-", username: "admin", password: "1234", role: "admin", lastBmi: "-", lastPlan: "-" }];
             }
         }
         initDB();
@@ -584,31 +689,31 @@
             
             if (currentUser) {
                 let adminBtn = currentUser.role === 'admin' 
-                    ? `<button onClick="showAdminPage()" class="text-orange-400 font-bold hover:text-orange-300 transition-colors flex items-center gap-1"><i class="ph-fill ph-shield-check text-xl"></i> แอดมิน</button>` : '';
+                    ? `<button onclick="showAdminPage()" class="text-orange-400 font-bold hover:text-orange-300 transition-colors flex items-center gap-1"><i class="ph-fill ph-shield-check text-xl"></i> แอดมิน</button>` : '';
                     
                 desktopNav.innerHTML = `
                     ${adminBtn}
                     <div class="flex items-center gap-3 text-white ml-2">
                         <span class="bg-slate-800/80 px-4 py-1.5 rounded-full text-sm flex items-center gap-2"><i class="ph-fill ph-user text-primary"></i> ${currentUser.name}</span>
-                        <button onClick="logout()" class="text-slate-300 hover:text-red-400 transition-colors text-sm font-medium">ออกจากระบบ</button>
+                        <button onclick="logout()" class="text-slate-300 hover:text-red-400 transition-colors text-sm font-medium">ออกจากระบบ</button>
                     </div>
                 `;
 
                 let adminBtnMobile = currentUser.role === 'admin' 
-                    ? `<button onClick="showAdminPage()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-orange-400 font-bold hover:bg-slate-800"><i class="ph-fill ph-shield-check"></i> หน้าจัดการแอดมิน</button>` : '';
+                    ? `<button onclick="showAdminPage()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-orange-400 font-bold hover:bg-slate-800"><i class="ph-fill ph-shield-check"></i> หน้าจัดการแอดมิน</button>` : '';
 
                 mobileNav.innerHTML = `
                     ${adminBtnMobile}
                     <div class="px-3 py-2 text-primary font-medium text-sm flex items-center gap-2"><i class="ph-fill ph-user"></i> ${currentUser.name}</div>
-                    <button onClick="logout()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-red-400 font-medium hover:bg-slate-800">ออกจากระบบ</button>
+                    <button onclick="logout()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-red-400 font-medium hover:bg-slate-800">ออกจากระบบ</button>
                 `;
             } else {
                 desktopNav.innerHTML = `
-                    <button onClick="openAuthModal()" class="text-white hover:text-primary font-medium transition-colors">เข้าสู่ระบบ</button>
-                    <a href="#classes" onClick="backToMain()" class="bg-primary hover:bg-primaryDark text-white px-6 py-2 rounded-full font-medium transition-colors shadow-lg shadow-primary/30">เริ่มกันเลย</a>
+                    <button onclick="openAuthModal()" class="text-white hover:text-primary font-medium transition-colors">เข้าสู่ระบบ</button>
+                    <a href="#classes" onclick="backToMain()" class="bg-primary hover:bg-primaryDark text-white px-6 py-2 rounded-full font-medium transition-colors shadow-lg shadow-primary/30">เริ่มกันเลย</a>
                 `;
                 mobileNav.innerHTML = `
-                    <button onClick="openAuthModal()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-primary font-bold hover:bg-slate-800">เข้าสู่ระบบ / ลงทะเบียน</button>
+                    <button onclick="openAuthModal()" class="mobile-link block w-full text-left px-3 py-2 rounded-md text-primary font-bold hover:bg-slate-800">เข้าสู่ระบบ / ลงทะเบียน</button>
                 `;
             }
         }
@@ -659,10 +764,13 @@
             }
             
             btnText.textContent = "กำลังตรวจสอบ...";
-            await initDB(); 
+            await initDB(); // อัปเดตข้อมูลล่าสุดจาก Google Sheets
 
-            // ป้องกันปัญหารหัสผ่านถูกแปลงเป็นตัวเลขใน Google Sheets
-            const userFound = usersDB.find(u => String(u.username).trim() === userVal && String(u.password).trim() === passVal);
+            // เช็คผู้ใช้ โดยแปลงทั้งใน DB และข้อมูลที่กรอก ให้เป็น String ตัดช่องว่างทิ้ง ป้องกันบั๊กเรื่องการพิมพ์ผิด
+            const userFound = usersDB.find(u => 
+                String(u.username).trim() === userVal && 
+                String(u.password).trim() === passVal
+            );
 
             if (userFound) {
                 currentUser = userFound;
@@ -696,7 +804,8 @@
             btnText.textContent = "กำลังบันทึก...";
             await initDB(); 
 
-            if (usersDB.find(u => String(u.username) === userVal)) {
+            // ตรวจสอบว่ามีชื่อผู้ใช้นี้อยู่แล้วหรือไม่
+            if (usersDB.find(u => String(u.username).trim() === userVal)) {
                 err.textContent = "ชื่อผู้ใช้นี้มีคนใช้แล้ว กรุณาใช้ชื่ออื่น";
                 err.classList.remove('hidden');
                 btnText.textContent = "สร้างบัญชีผู้ใช้";
@@ -706,7 +815,11 @@
             const newUser = { action: 'register', name: nameVal, gender: genderVal, username: userVal, password: passVal, role: "user", lastBmi: "-", lastPlan: "-" };
             
             if (!SCRIPT_URL.includes('วาง_URL')) {
-                await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(newUser) });
+                try {
+                    await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(newUser) });
+                } catch(e) {
+                    console.log("บันทึกลง Sheet ไม่ได้ ทำงานแบบ Local");
+                }
             }
             
             usersDB.push(newUser);
@@ -730,18 +843,18 @@
             backToMain();
         }
 
-        // ------------------ ระบบคำนวณและบันทึก BMI ------------------
+        // ------------------ ระบบคำนวณและบันทึก BMI ลง Google Sheets ------------------
         async function saveBmiToGoogleSheets() {
             currentUser.lastBmi = currentBmiText;
             currentUser.lastPlan = healthPlans[currentPlanKey].title;
             
             if (!SCRIPT_URL.includes('วาง_URL')) {
                 const updateData = { action: 'updateBmi', username: currentUser.username, lastBmi: currentUser.lastBmi, lastPlan: currentUser.lastPlan };
-                fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(updateData) });
+                fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(updateData) }).catch(e=>console.log(e));
             }
         }
 
-        async function calculateStats() {
+        function calculateStats() {
             const gender = document.getElementById('gender').value;
             const ageInput = document.getElementById('age').value;
             const weightInput = document.getElementById('weight').value;
@@ -782,6 +895,7 @@
             if (currentUser && currentUser.role !== 'admin') saveBmiToGoogleSheets();
         }
 
+        // ------------------ ระบบสลับหน้า (ตาราง & แอดมิน) ------------------
         function showPlanPage() {
             if (!currentUser) {
                 document.getElementById('login-error').textContent = "กรุณาเข้าสู่ระบบหรือลงทะเบียน ก่อนดูตารางครับ";
@@ -906,14 +1020,22 @@
             const tbody = document.getElementById('plan-table-body');
             tbody.innerHTML = ''; 
             
-            const dayColors = ["bg-yellow-50 text-yellow-700", "bg-pink-50 text-pink-700", "bg-green-50 text-green-700", "bg-orange-50 text-orange-700", "bg-blue-50 text-blue-700", "bg-purple-50 text-purple-700", "bg-red-50 text-red-700"];
+            const dayColors = [
+                "bg-yellow-50 text-yellow-700", "bg-pink-50 text-pink-700", 
+                "bg-green-50 text-green-700", "bg-orange-50 text-orange-700",
+                "bg-blue-50 text-blue-700", "bg-purple-50 text-purple-700", "bg-red-50 text-red-700"
+            ];
 
             plan.schedule.forEach((item, index) => {
                 const tr = document.createElement('tr');
                 tr.className = index % 2 === 0 ? 'bg-white hover:bg-slate-50 transition-colors' : 'bg-slate-50/50 hover:bg-slate-50 transition-colors';
                 tr.innerHTML = `
-                    <td class="p-5 border-r border-slate-100 font-bold whitespace-nowrap"><span class="inline-block px-3 py-1 rounded-lg ${dayColors[index]}">${item.day}</span></td>
-                    <td class="p-5 border-r border-slate-100 text-slate-800 font-medium">${item.workout.includes('พัก') ? `<span class="text-slate-500"><i class="ph-fill ph-bed mr-1"></i>${item.workout}</span>` : `<span class="text-slate-800">${item.workout}</span>`}</td>
+                    <td class="p-5 border-r border-slate-100 font-bold whitespace-nowrap">
+                        <span class="inline-block px-3 py-1 rounded-lg ${dayColors[index]}">${item.day}</span>
+                    </td>
+                    <td class="p-5 border-r border-slate-100 text-slate-800 font-medium">
+                        ${item.workout.includes('พัก') ? `<span class="text-slate-500"><i class="ph-fill ph-bed mr-1"></i>${item.workout}</span>` : `<span class="text-slate-800">${item.workout}</span>`}
+                    </td>
                     <td class="p-5 text-slate-600">${item.food}</td>
                 `;
                 tbody.appendChild(tr);
@@ -923,6 +1045,7 @@
         function openClassModal(classId) {
             const data = classDetailsData[classId];
             const modalBody = document.getElementById('class-modal-body');
+            
             modalBody.innerHTML = `
                 <div class="h-64 md:h-80 relative w-full">
                     <img src="${data.image}" class="w-full h-full object-cover">
@@ -941,37 +1064,61 @@
                     <h4 class="text-xl font-bold text-slate-900 mb-3 border-l-4 border-primary pl-3">รายละเอียดคลาส</h4>
                     <p class="text-slate-600 mb-8 leading-relaxed">${data.description}</p>
                     <h4 class="text-xl font-bold text-slate-900 mb-4 border-l-4 border-primary pl-3">ประโยชน์ที่คุณจะได้รับ</h4>
-                    <ul class="space-y-3 mb-8">${data.benefits.map(b => `<li class="flex items-start gap-3 text-slate-700 bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="ph-fill ph-check-circle text-primary text-xl mt-0.5"></i> ${b}</li>`).join('')}</ul>
+                    <ul class="space-y-3 mb-8">
+                        ${data.benefits.map(b => `<li class="flex items-start gap-3 text-slate-700 bg-slate-50 p-3 rounded-lg border border-slate-100"><i class="ph-fill ph-check-circle text-primary text-xl mt-0.5"></i> ${b}</li>`).join('')}
+                    </ul>
                     <h4 class="text-xl font-bold text-slate-900 mb-4 border-l-4 border-blue-500 pl-3">ท่าออกกำลังกายหลักในคลาส</h4>
-                    <ul class="space-y-3 mb-8">${data.workouts.map(w => `<li class="flex items-start gap-3 text-slate-700 bg-blue-50/50 p-3 rounded-lg border border-blue-100"><i class="ph-fill ph-person-simple-walk text-blue-500 text-xl mt-0.5"></i> ${w}</li>`).join('')}</ul>
+                    <ul class="space-y-3 mb-8">
+                        ${data.workouts.map(w => `<li class="flex items-start gap-3 text-slate-700 bg-blue-50/50 p-3 rounded-lg border border-blue-100"><i class="ph-fill ph-person-simple-walk text-blue-500 text-xl mt-0.5"></i> ${w}</li>`).join('')}
+                    </ul>
                     <h4 class="text-xl font-bold text-slate-900 mb-4 border-l-4 border-orange-500 pl-3">โภชนาการที่แนะนำ</h4>
-                    <div class="bg-orange-50 p-4 rounded-xl border border-orange-100 mb-8 flex items-start gap-3"><i class="ph-fill ph-apple-logo text-orange-500 text-2xl mt-1"></i><p class="text-slate-700 leading-relaxed">${data.nutrition}</p></div>
-                    <button id="book-btn" onClick="mockBooking()" class="w-full bg-slate-900 hover:bg-slate-800 text-white py-4 rounded-xl font-bold text-lg transition-colors shadow-lg flex items-center justify-center gap-2"><i class="ph-bold ph-calendar-plus"></i> สนใจจองคลาสนี้</button>
+                    <div class="bg-orange-50 p-4 rounded-xl border border-orange-100 mb-8 flex items-start gap-3">
+                        <i class="ph-fill ph-apple-logo text-orange-500 text-2xl mt-1"></i>
+                        <p class="text-slate-700 leading-relaxed">${data.nutrition}</p>
+                    </div>
+                    <button id="book-btn" onclick="mockBooking()" class="w-full bg-slate-900 hover:bg-slate-800 text-white py-4 rounded-xl font-bold text-lg transition-colors shadow-lg flex items-center justify-center gap-2">
+                        <i class="ph-bold ph-calendar-plus"></i> สนใจจองคลาสนี้
+                    </button>
                 </div>
             `;
-            document.getElementById('class-modal').classList.remove('hidden');
+            const modal = document.getElementById('class-modal');
+            const modalContent = document.getElementById('class-modal-content');
+            modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
-            setTimeout(() => document.getElementById('class-modal-content').classList.add('scale-100', 'opacity-100'), 10);
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
         }
 
         function closeClassModal() {
-            document.getElementById('class-modal-content').classList.remove('scale-100', 'opacity-100');
+            const modal = document.getElementById('class-modal');
+            const modalContent = document.getElementById('class-modal-content');
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
             document.body.style.overflow = '';
-            setTimeout(() => document.getElementById('class-modal').classList.add('hidden'), 300);
+            setTimeout(() => modal.classList.add('hidden'), 300);
         }
 
         function mockBooking() {
             if (!currentUser) {
                 closeClassModal();
-                setTimeout(() => { document.getElementById('login-error').textContent = "กรุณาเข้าสู่ระบบหรือลงทะเบียน เพื่อทำการจองคลาสเรียนครับ"; document.getElementById('login-error').classList.remove('hidden'); openAuthModal(); }, 350); 
+                setTimeout(() => {
+                    document.getElementById('login-error').textContent = "กรุณาเข้าสู่ระบบหรือลงทะเบียน เพื่อทำการจองคลาสเรียนครับ";
+                    document.getElementById('login-error').classList.remove('hidden');
+                    openAuthModal();
+                }, 350); 
                 return;
             }
             const btn = document.getElementById('book-btn');
-            btn.innerHTML = `<i class="ph-bold ph-check"></i> รับเรื่องจองสำเร็จ!`; btn.className = "w-full bg-primary hover:bg-primaryDark text-white py-4 rounded-xl font-bold text-lg transition-colors shadow-lg flex items-center justify-center gap-2";
+            btn.innerHTML = `<i class="ph-bold ph-check"></i> รับเรื่องจองสำเร็จ!`;
+            btn.classList.remove('bg-slate-900', 'hover:bg-slate-800');
+            btn.classList.add('bg-primary', 'hover:bg-primaryDark');
             setTimeout(() => closeClassModal(), 1500);
         }
 
         // ------------------ ระบบแอดมินและการจัดการผู้ใช้ ------------------
+        
         function switchAdminTab(tab) {
             currentAdminTab = tab;
             const btnUsers = document.getElementById('tab-manage-users');
@@ -985,38 +1132,43 @@
                 btnUsers.className = "px-6 py-2 rounded-md font-bold text-sm text-slate-500 hover:text-slate-900 transition-all flex items-center gap-2";
             }
             
+            // ล้างช่องค้นหาเมื่อเปลี่ยนแท็บ
             document.getElementById('admin-search').value = "";
             document.getElementById('admin-filter-gender').value = "all";
-            filterAdminTable();
+            filterAdminTable(); // สั่งอัปเดตตาราง
         }
 
         async function renderAdminTable() {
             const tbody = document.getElementById('admin-table-body');
-            tbody.innerHTML = '<tr><td colspan="7" class="p-8 text-center text-slate-500"><i class="ph ph-spinner animate-spin inline-block text-xl"></i> กำลังโหลดข้อมูล...</td></tr>';
-            await initDB(); 
-            filterAdminTable();
+            tbody.innerHTML = '<tr><td colspan="7" class="p-8 text-center text-slate-500"><i class="ph ph-spinner animate-spin inline-block text-xl"></i> กำลังโหลดข้อมูลจาก Google Sheets...</td></tr>';
+            
+            await initDB(); // ดึงข้อมูลล่าสุดจาก Google Sheets เสมอ
+            
+            filterAdminTable(); // เรียกฟังก์ชันคัดกรองแท็บและแสดงผล
         }
 
         function displayAdminUsers(userList, viewRole) {
             const tbody = document.getElementById('admin-table-body');
             tbody.innerHTML = '';
             
-            const countText = viewRole === 'admin' ? `ผู้ดูแลระบบ ${userList.length} คน` : `ผู้ใช้ทั่วไป ${userList.length} คน`;
+            const countText = viewRole === 'admin' ? `ผู้ดูแลระบบ ${userList.length} คน` : `ผู้ใช้งานทั่วไป ${userList.length} คน`;
             document.getElementById('admin-user-count').textContent = countText;
 
             if (userList.length === 0) {
                 tbody.innerHTML = `<tr><td colspan="7" class="p-8 text-center text-slate-500">ไม่พบข้อมูล</td></tr>`;
                 return;
             }
+            
             userList.forEach(u => {
                 const roleBadge = u.role === 'admin' 
                     ? `<span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold">Admin</span>` 
                     : `<span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">User</span>`;
                 
-                const isCurrentUserAdmin = (currentUser && currentUser.username === u.username);
+                const isCurrentUserAdmin = (currentUser && String(currentUser.username).trim() === String(u.username).trim());
+                
                 const deleteBtn = isCurrentUserAdmin
                     ? `<button disabled class="text-slate-300 p-2 cursor-not-allowed" title="ไม่สามารถลบบัญชีตัวเองได้"><i class="ph-fill ph-prohibit text-lg"></i></button>`
-                    : `<button onClick="deleteUser('${u.username}')" class="text-red-500 hover:text-red-700 hover:bg-red-50 p-2 rounded-lg transition-colors" title="ลบผู้ใช้นี้"><i class="ph-bold ph-trash text-lg"></i></button>`;
+                    : `<button onclick="deleteUser('${u.username}')" class="text-red-500 hover:text-red-700 hover:bg-red-50 p-2 rounded-lg transition-colors" title="ลบผู้ใช้นี้"><i class="ph-bold ph-trash text-lg"></i></button>`;
 
                 const tr = document.createElement('tr');
                 tr.className = "hover:bg-slate-50 transition-colors";
@@ -1037,18 +1189,27 @@
             const keyword = document.getElementById('admin-search').value.toLowerCase();
             const genderFilter = document.getElementById('admin-filter-gender').value;
 
+            // 1. แยกแท็บระหว่าง Admin กับ User
             let filteredUsers = usersDB.filter(u => {
-                if (currentAdminTab === 'users') return u.role !== 'admin';
-                if (currentAdminTab === 'admins') return u.role === 'admin';
+                const uRole = (u.role || '').trim().toLowerCase(); // ป้องกันการเว้นวรรคใน DB
+                if (currentAdminTab === 'users') return uRole !== 'admin';
+                if (currentAdminTab === 'admins') return uRole === 'admin';
                 return true;
             });
 
+            // 2. กรองตามชื่อและเพศ
             filteredUsers = filteredUsers.filter(u => {
-                const matchKeyword = (u.name || "").toLowerCase().includes(keyword) || (u.username || "").toLowerCase().includes(keyword);
-                const matchGender = (genderFilter === 'all') || (u.gender === genderFilter);
+                const safeName = String(u.name || "").toLowerCase();
+                const safeUser = String(u.username || "").toLowerCase();
+                const safeGender = String(u.gender || "");
+
+                const matchKeyword = safeName.includes(keyword) || safeUser.includes(keyword);
+                const matchGender = (genderFilter === 'all') || (safeGender === genderFilter);
+                
                 return matchKeyword && matchGender;
             });
 
+            // บันทึกใส่ global เพื่อให้กดดาวน์โหลด Excel ได้ตรงตามที่เห็น
             globalUserList = filteredUsers;
             displayAdminUsers(filteredUsers, currentAdminTab === 'admins' ? 'admin' : 'user');
         }
@@ -1058,10 +1219,16 @@
             document.getElementById('confirm-modal-text').textContent = `คุณแน่ใจหรือไม่ว่าต้องการลบผู้ใช้ @${username} ?`;
             confirmActionCallback = async () => {
                 if (!SCRIPT_URL.includes('วาง_URL')) {
-                    await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify({ action: 'delete', username: username }) });
+                    try {
+                        await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify({ action: 'delete', username: username }) });
+                    } catch(e) { console.log(e); }
+                } else {
+                    // หากทำงานแบบ Local ให้ลบข้อมูลในตัวแปร
+                    usersDB = usersDB.filter(u => String(u.username).trim() !== String(username).trim());
                 }
-                await renderAdminTable(); 
+                await renderAdminTable(); // โหลดตารางใหม่หลังลบ
             };
+            
             document.getElementById('confirm-modal').classList.remove('hidden');
             setTimeout(() => document.getElementById('confirm-modal-content').classList.add('scale-100', 'opacity-100'), 10);
         }
@@ -1070,46 +1237,94 @@
             document.getElementById('confirm-modal-content').classList.remove('scale-100', 'opacity-100');
             setTimeout(() => document.getElementById('confirm-modal').classList.add('hidden'), 300);
         }
-        document.getElementById('confirm-ok-btn').addEventListener('click', () => { hideCustomConfirm(); if(confirmActionCallback) confirmActionCallback(); });
+        
+        document.getElementById('confirm-ok-btn').addEventListener('click', () => { 
+            hideCustomConfirm(); 
+            if(confirmActionCallback) confirmActionCallback(); 
+        });
 
         // ------------------ ระบบเพิ่มแอดมิน ------------------
-        function openAddAdminModal() { document.getElementById('add-admin-modal').classList.remove('hidden'); setTimeout(() => document.getElementById('add-admin-modal-content').classList.add('scale-100', 'opacity-100'), 10); }
-        function closeAddAdminModal() { document.getElementById('add-admin-modal-content').classList.remove('scale-100', 'opacity-100'); setTimeout(() => document.getElementById('add-admin-modal').classList.add('hidden'), 300); }
+        function openAddAdminModal() { 
+            document.getElementById('add-admin-error').classList.add('hidden');
+            document.getElementById('add-admin-success').classList.add('hidden');
+            document.getElementById('add-admin-name').value = '';
+            document.getElementById('add-admin-username').value = '';
+            document.getElementById('add-admin-password').value = '';
+            
+            document.getElementById('add-admin-modal').classList.remove('hidden'); 
+            setTimeout(() => document.getElementById('add-admin-modal-content').classList.add('scale-100', 'opacity-100'), 10); 
+        }
+        
+        function closeAddAdminModal() { 
+            document.getElementById('add-admin-modal-content').classList.remove('scale-100', 'opacity-100'); 
+            setTimeout(() => document.getElementById('add-admin-modal').classList.add('hidden'), 300); 
+        }
 
         async function handleAddAdmin() {
-            const nameVal = document.getElementById('add-admin-name').value;
-            const userVal = document.getElementById('add-admin-username').value;
-            const passVal = document.getElementById('add-admin-password').value;
+            const nameVal = document.getElementById('add-admin-name').value.trim();
+            const userVal = document.getElementById('add-admin-username').value.trim();
+            const passVal = document.getElementById('add-admin-password').value.trim();
+            const err = document.getElementById('add-admin-error');
+            const succ = document.getElementById('add-admin-success');
             const btnText = document.getElementById('add-admin-btn-text');
             
-            if(!nameVal || !userVal || !passVal) {
-                document.getElementById('add-admin-error').textContent = "กรุณากรอกข้อมูลให้ครบถ้วน";
-                document.getElementById('add-admin-error').classList.remove('hidden');
+            err.classList.add('hidden');
+            succ.classList.add('hidden');
+            
+            if (!nameVal || !userVal || !passVal) {
+                err.textContent = "กรุณากรอกข้อมูลให้ครบถ้วน";
+                err.classList.remove('hidden');
+                return;
+            }
+            
+            btnText.textContent = "กำลังบันทึก...";
+            await initDB();
+
+            if (usersDB.find(u => String(u.username).trim() === userVal)) {
+                err.textContent = "ชื่อผู้ใช้นี้มีคนใช้แล้ว กรุณาใช้ชื่ออื่น";
+                err.classList.remove('hidden');
+                btnText.textContent = "สร้างบัญชีแอดมิน";
                 return;
             }
 
-            btnText.textContent = "กำลังบันทึก...";
             const newAdmin = { action: 'addAdmin', name: nameVal, gender: "-", username: userVal, password: passVal, role: "admin", lastBmi: "-", lastPlan: "-" };
             
             if (!SCRIPT_URL.includes('วาง_URL')) {
-                await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(newAdmin) });
+                try {
+                    await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(newAdmin) });
+                } catch(e) { console.log(e); }
+            } else {
+                usersDB.push(newAdmin);
             }
             
-            document.getElementById('add-admin-success').textContent = "สร้างบัญชีแอดมินสำเร็จ!";
-            document.getElementById('add-admin-success').classList.remove('hidden');
-            setTimeout(() => closeAddAdminModal(), 1500);
-            btnText.textContent = "สร้างบัญชีแอดมิน";
+            succ.textContent = "สร้างบัญชีแอดมินสำเร็จ!";
+            succ.classList.remove('hidden');
             
-            await initDB();
-            filterAdminTable();
+            setTimeout(() => {
+                closeAddAdminModal();
+                renderAdminTable(); // อัปเดตตารางหลังเพิ่มเสร็จ
+            }, 1500);
+            
+            btnText.textContent = "สร้างบัญชีแอดมิน";
         }
 
         function exportToCSV() {
+            if(globalUserList.length === 0) {
+                alert("ยังไม่มีข้อมูลสำหรับทำรายงาน");
+                return;
+            }
             let csvContent = "\uFEFFชื่อ-นามสกุล,เพศ,ชื่อผู้ใช้,สถานะ,BMI ล่าสุด,เป้าหมายที่แนะนำ\n";
-            globalUserList.forEach(u => csvContent += `"${u.name}","${u.gender}","${u.username}","${u.role}","${u.lastBmi}","${u.lastPlan}"\n`);
+            globalUserList.forEach(u => {
+                const roleText = u.role === 'admin' ? 'ผู้ดูแลระบบ' : 'ผู้ใช้งานทั่วไป';
+                csvContent += `"${(u.name||"-").replace(/"/g, '""')}","${u.gender||"-"}","${(u.username||"-").replace(/"/g, '""')}","${roleText}","${(u.lastBmi||"-").replace(/"/g, '""')}","${(u.lastPlan||"-").replace(/"/g, '""')}"\n`;
+            });
             const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement("a"); link.href = URL.createObjectURL(blob); link.download = "FitLife_Report.csv";
-            document.body.appendChild(link); link.click(); document.body.removeChild(link);
+            const link = document.createElement("a"); 
+            link.href = URL.createObjectURL(blob); 
+            link.download = `FitLife_Report_${currentAdminTab}.csv`;
+            document.body.appendChild(link); 
+            link.click(); 
+            document.body.removeChild(link);
         }
     </script>
 </body>
